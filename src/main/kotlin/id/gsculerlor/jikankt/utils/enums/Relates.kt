@@ -1,4 +1,4 @@
-package id.gsculerlor.jikankt.model.etc.related
+package id.gsculerlor.jikankt.utils.enums
 
 enum class Relates {
     PREQUEL,

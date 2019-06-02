@@ -1,6 +1,7 @@
 package id.gsculerlor.jikankt.model.etc.related
 
 import com.google.gson.annotations.SerializedName
+import id.gsculerlor.jikankt.utils.enums.Relates
 
 data class Related(
 

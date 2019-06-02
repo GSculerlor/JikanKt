@@ -1,8 +1,8 @@
-package id.gsculerlor.jikankt.model.anime.episode
+package id.gsculerlor.jikankt.model.anime.video
 
 import com.google.gson.annotations.SerializedName
 
-data class EpisodePage(
+data class VideoPage(
     @SerializedName("request_hash")
     val requestHash: String? = null,
 
@@ -12,9 +12,9 @@ data class EpisodePage(
     @SerializedName("request_cache_expiry")
     val requestCacheExpiry: Int? = null,
 
-    @SerializedName("episodes_last_page")
-    val episodeLastPage: Int? = null,
+    @SerializedName("promo")
+    val promoVideos: List<Promo?>? = null,
 
     @SerializedName("episodes")
-    val episodes: List<Episode?>? = null
+    val episodeVideos: List<Episode?>? = null
 )
