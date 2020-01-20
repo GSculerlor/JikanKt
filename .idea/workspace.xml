@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8dd32607-fd14-4b85-a1a4-7ff488db53e4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Object" />
+        <option value="Class" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WcbsAJcKj0zDePe8EEkZWmEVbB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager" selected="Kotlin.moe.ganen.jikankt.ExampleClassKt">
+    <configuration name="moe.ganen.jikankt.ExampleClassKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="JikanKt.test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="moe.ganen.jikankt.ExampleClassKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="build.gradle.kts" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script" temporary="true" nameIsGenerated="true">
+      <module name="JikanKt" />
+      <option name="filePath" value="$PROJECT_DIR$/build.gradle.kts" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" value="$PROJECT_DIR$/build.gradle.kts" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.moe.ganen.jikankt.ExampleClassKt" />
+        <item itemvalue="Kotlin script.build.gradle.kts" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8dd32607-fd14-4b85-a1a4-7ff488db53e4" name="Default Changelist" comment="" />
+      <created>1579452034602</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579452034602</updated>
+      <workItem from="1579452039742" duration="4307000" />
+      <workItem from="1579516318978" duration="7071000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="23" key="#Project_Structure" timestamp="1579454811101">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#Project_Structure/1366.0.1366.728/0.0.1366.728@0.0.1366.728" timestamp="1579454811101" />
+    <state width="1323" height="319" key="GridCell.Tab.0.bottom" timestamp="1579545935134">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="319" key="GridCell.Tab.0.bottom/1366.0.1366.728/0.0.1366.728@0.0.1366.728" timestamp="1579545935134" />
+    <state width="1323" height="319" key="GridCell.Tab.0.center" timestamp="1579545935134">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="319" key="GridCell.Tab.0.center/1366.0.1366.728/0.0.1366.728@0.0.1366.728" timestamp="1579545935134" />
+    <state width="1323" height="319" key="GridCell.Tab.0.left" timestamp="1579545935134">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="319" key="GridCell.Tab.0.left/1366.0.1366.728/0.0.1366.728@0.0.1366.728" timestamp="1579545935134" />
+    <state width="1323" height="319" key="GridCell.Tab.0.right" timestamp="1579545935134">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="319" key="GridCell.Tab.0.right/1366.0.1366.728/0.0.1366.728@0.0.1366.728" timestamp="1579545935134" />
+    <state x="184" y="7" key="SettingsEditor" timestamp="1579516545240">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="7" key="SettingsEditor/1366.0.1366.728/0.0.1366.728@0.0.1366.728" timestamp="1579516545240" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1579546789682">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/1366.0.1366.728/0.0.1366.728@0.0.1366.728" timestamp="1579546789682" />
+  </component>
+</project>
