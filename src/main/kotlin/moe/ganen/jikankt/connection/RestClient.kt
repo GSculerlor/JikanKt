@@ -14,7 +14,7 @@ import moe.ganen.jikankt.exception.JikanException
 import moe.ganen.jikankt.exception.TooManyRequestException
 
 class RestClient : JikanClient() {
-    private val client = CLIENT
+    private val client = httpClient
     private val gson = Gson()
 
     suspend fun request(endPoint: String, data: JsonObject? = null): JsonElement {
@@ -26,7 +26,7 @@ class RestClient : JikanClient() {
                 }
             }
 
-            LOGGER.info { "Requesting to Jikan: $url" }
+            logger.info { "Requesting to Jikan: $url" }
 
             val response = client.call {
                 method = HttpMethod.Get
@@ -46,7 +46,7 @@ class RestClient : JikanClient() {
                 null
             }
 
-            LOGGER.debug("Response from Jikan: ${response.status.value}, body: $json")
+            logger.debug("Response from Jikan: ${response.status.value}, body: $json")
 
             if (response.status.value !in 200..299) {
                 if (response.status.value in 500..599)
@@ -64,7 +64,7 @@ class RestClient : JikanClient() {
         } catch (ex: TooManyRequestException) {
             throw ex
         } catch (ex: Exception) {
-            LOGGER.error(ex) { "An unexpected error has occurred!" }
+            logger.error(ex) { "An unexpected error has occurred!" }
             throw ex
         }
     }
