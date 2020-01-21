@@ -71,6 +71,6 @@ class RestClient {
     }
 
     companion object {
-        private const val BASE_URL = "https://api.jikan.moe/v3"
+        private const val BASE_URL = "https://api.jikan.moe/v3/"
     }
 }

@@ -1,8 +1,9 @@
 package moe.ganen.jikankt.models.base
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
-abstract class Entity {
+abstract class Entity : Serializable {
     /**
      * Hash of the request.
      */
@@ -18,6 +19,6 @@ abstract class Entity {
     /**
      * Cache expiration in second.
      */
-    @SerializedName("request_cached_expiry")
+    @SerializedName("request_cache_expiry")
     val requestCachedExpiry: Int? = null
 }
