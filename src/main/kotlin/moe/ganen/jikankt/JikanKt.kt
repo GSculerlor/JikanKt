@@ -1,35 +1,19 @@
 package moe.ganen.jikankt
 
-import io.ktor.client.HttpClient
-import io.ktor.client.engine.okhttp.OkHttp
-import io.ktor.client.features.json.GsonSerializer
-import io.ktor.client.features.json.JsonFeature
-import mu.KotlinLogging
-import okhttp3.Protocol
+import com.google.gson.GsonBuilder
+import moe.ganen.jikankt.connection.RestClient
+import moe.ganen.jikankt.models.anime.Anime
+import moe.ganen.jikankt.models.base.Entity
+import moe.ganen.jikankt.utils.InterfaceAdapter
+import moe.ganen.jikankt.utils.deserialize
 
 object JikanKt {
-    private const val JIKANKT_NAME = "JikanKt"
-    private const val JIKANKT_VERSION = "0.0.1"
+    private val restClient = RestClient()
+    private val gson = GsonBuilder().registerTypeAdapter(Entity::class.java, InterfaceAdapter<Entity>()).create()
 
-    val CLIENT by lazy {
-        HttpClient(OkHttp) {
-            engine {
-                config {
-                    protocols(listOf(Protocol.HTTP_1_1))
-                }
-            }
+    //region Anime
 
-            install(JsonFeature) {
-                serializer = GsonSerializer()
-            }
+    suspend fun getAnime(id: Int): Anime = gson.deserialize(restClient.request("anime/$id"), Anime::class.java)
 
-            expectSuccess = false
-        }
-    }
-
-    val LOGGER = KotlinLogging.logger(JIKANKT_NAME)
-
-    init {
-        LOGGER.info { "Initialize $JIKANKT_NAME version $JIKANKT_VERSION" }
-    }
+    //endregion
 }

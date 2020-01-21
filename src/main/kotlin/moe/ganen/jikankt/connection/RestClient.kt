@@ -9,12 +9,11 @@ import io.ktor.client.request.url
 import io.ktor.client.response.readText
 import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpMethod
-import moe.ganen.jikankt.JikanKt.CLIENT
-import moe.ganen.jikankt.JikanKt.LOGGER
+import moe.ganen.jikankt.JikanClient
 import moe.ganen.jikankt.exception.JikanException
 import moe.ganen.jikankt.exception.TooManyRequestException
 
-class RestClient {
+class RestClient : JikanClient() {
     private val client = CLIENT
     private val gson = Gson()
 
