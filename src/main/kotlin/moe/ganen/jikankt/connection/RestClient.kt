@@ -20,14 +20,14 @@ class RestClient {
 
     suspend fun request(endPoint: String, data: JsonObject? = null): JsonElement {
         try {
-            LOGGER.debug("Requesting to Jikan: $endPoint")
-
             var url = BASE_URL + endPoint
             if (data != null) {
                 url += "?" + data.entrySet().joinToString("&") { entry ->
                     "${entry.key}=${entry.value}"
                 }
             }
+
+            LOGGER.info { "Requesting to Jikan: $url" }
 
             val response = client.call {
                 method = HttpMethod.Get
@@ -65,7 +65,7 @@ class RestClient {
         } catch (ex: TooManyRequestException) {
             throw ex
         } catch (ex: Exception) {
-            LOGGER.warn("An unexpected error has occurred!", ex)
+            LOGGER.error(ex) { "An unexpected error has occurred!" }
             throw ex
         }
     }
