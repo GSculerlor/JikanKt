@@ -4,7 +4,48 @@
 
 ![JikanKt Banner](https://gsculerlor.s-ul.eu/fl0ZwFFo)
 
-API wrapper for [Jikan API](https://jikan.moe) build using Kotlin + Coroutines power 🚀 (Well still under heavy development so it's still unusable, *yet*)
+API wrapper for [Jikan API](https://jikan.moe) build using Kotlin + Kotlin DSL + Coroutines power 🚀
 
+# Installation
+with Gradle
+```groovy
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+    
+dependencies {
+    implementation 'com.github.GSculerlor:JikanKt:0.0.1'
+}
+```
+with Maven
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependency>
+    <groupId>com.github.GSculerlor</groupId>
+    <artifactId>JikanKt</artifactId>
+    <version>0.0.1</version>
+</dependency>
+```
+
+# Example
+```kotlin
+fun main() {
+    runBlocking {
+        val anime = JikanKt.getAnime(38992)
+        println(anime)
+    }
+}
+```
+# Status
+JikanKt is under heavily development after revived from eternal slumber. At this point, some of the endpoints maybe still not wrapped yet, so please stay tune!
+Also currently it only run on JVM, but don't worry, Kotlin multiplatform is already planned on next major release! Also test will added once all of the endpoint is mapped which is very very soon!
+
+# Contribution
 Want to help? I'm very open to contributors so just do it or contact me if you have any question (Discord: Ganen#0124)
 
