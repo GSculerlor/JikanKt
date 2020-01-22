@@ -1,8 +1,9 @@
 plugins {
     kotlin("jvm") version "1.3.61"
+    maven
 }
 
-group = "moe.ganen"
+group = "com.github.GSculerlor"
 version = "0.0.1"
 
 repositories {
