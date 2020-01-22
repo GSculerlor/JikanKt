@@ -14,13 +14,13 @@ data class Character(
     override val malId: Int,
 
     /**
-     * Character's MyAnimeList link.
+     * Character's MyAnimeList URL.
      */
     @SerializedName("url")
     val url: String? = null,
 
     /**
-     * Character's MyAnimeList cover/image link.
+     * Character's MyAnimeList cover/image URL.
      */
     @SerializedName("image_url")
     val imageUrl: String? = null,

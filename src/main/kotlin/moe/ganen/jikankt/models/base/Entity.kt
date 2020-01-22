@@ -20,5 +20,5 @@ abstract class Entity : Serializable {
      * Cache expiration in second.
      */
     @SerializedName("request_cache_expiry")
-    val requestCachedExpiry: Int? = null
+    val requestCacheExpiry: Int? = null
 }

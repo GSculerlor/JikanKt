@@ -34,6 +34,12 @@ class JsonBuilder {
     fun get() = jsonObject
 }
 
+/**
+ * Gson extension function to deserialize [JsonElement] to [T]
+ * @param jsonElement: Json element that want to deserialize.
+ * @param type: return type
+ * @return T as the deserialize result.
+ */
 fun <T : Any> Gson.deserialize(jsonElement: JsonElement, type: Type): T {
     return this.fromJson<T>(jsonElement, type)
 }

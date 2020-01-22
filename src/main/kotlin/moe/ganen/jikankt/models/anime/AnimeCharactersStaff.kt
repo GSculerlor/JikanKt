@@ -5,6 +5,9 @@ import moe.ganen.jikankt.models.base.Entity
 import moe.ganen.jikankt.models.base.types.Character
 import moe.ganen.jikankt.models.base.types.Staff
 
+/**
+ * Anime's characters and staff data class
+ */
 data class AnimeCharactersStaff(
     /**
      * List of anime's character.
