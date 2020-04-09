@@ -112,4 +112,23 @@ object JikanKt {
         gson.deserialize(restClient.request("anime/$id/userupdates/$page"), AnimeUserUpdates::class.java)
 
     //endregion
+
+    //region People
+
+    /**
+     * Function to get person by it's MyAnimeList id
+     * @param id: MyAnimeList id of the person.
+     * @return Person with given MyAnimeList id.
+     */
+    suspend fun getPerson(id: Int): Person = gson.deserialize(restClient.request("person/$id"), Person::class.java)
+
+    /**
+     * Function to get person's pictures by it's MyAnimeList id
+     * @param id: MyAnimeList id of the person.
+     * @return List of pictures of the person with given MyAnimeList id.
+     */
+    suspend fun getPersonPictures(id: Int): PersonPictures =
+        gson.deserialize(restClient.request("person/$id/pictures"), PersonPictures::class.java)
+
+    //endregion
 }
