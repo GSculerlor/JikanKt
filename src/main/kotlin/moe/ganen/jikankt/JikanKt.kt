@@ -78,6 +78,14 @@ object JikanKt {
         gson.deserialize(restClient.request("anime/$id/forum"), AnimeForum::class.java)
 
     /**
+     * Function to get anime's more info by it's MyAnimeList id
+     * @param id: MyAnimeList id of the anime.
+     * @return Anime's more info in string, if any.
+     */
+    suspend fun getAnimeMoreInfo(id: Int): AnimeMoreInfo =
+        gson.deserialize(restClient.request("anime/$id/moreinfo"), AnimeMoreInfo::class.java)
+
+    /**
      * Function to get anime's reviews by it's MyAnimeList id
      * @param id: MyAnimeList id of the anime.
      * @param page: Optional, default is 1. Index of page, each page contain 20 items.

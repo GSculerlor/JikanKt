@@ -6,7 +6,7 @@ import java.util.*
 /**
  * User update detail.
  */
-data class UserUpdate(
+data class UserMangaUpdate(
     /**
      * User's username.
      */
@@ -26,28 +26,40 @@ data class UserUpdate(
     val imageUrl: String? = null,
 
     /**
-     * User's score on the anime.
+     * User's score on the manga.
      */
     @SerializedName("score")
     val score: Int? = null,
 
     /**
-     * User's status on the anime (e.g "Watching", "Dropped", etc).
+     * User's status on the manga (e.g "Reading", "Dropped", etc).
      */
     @SerializedName("status")
     val status: String? = null,
 
     /**
-     * Total user's watched episode(s).
+     * Total user's read volume(s).
      */
-    @SerializedName("episodes_seen")
-    val episodesSeen: Int? = null,
+    @SerializedName("volumes_read")
+    val volumesSeen: Int? = null,
 
     /**
-     * Total episodes of the anime.
+     * Total volumes of the manga.
      */
-    @SerializedName("episodes_total")
-    val episodesTotal: Int? = null,
+    @SerializedName("volumes_total")
+    val volumesTotal: Int? = null,
+
+    /**
+     * Total user's read chapter(s).
+     */
+    @SerializedName("chapters_read")
+    val chaptersSeen: Int? = null,
+
+    /**
+     * Total chapters of the manga.
+     */
+    @SerializedName("chapters_total")
+    val chaptersTotal: Int? = null,
 
     /**
      * User update date.
