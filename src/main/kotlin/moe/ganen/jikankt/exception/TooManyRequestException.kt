@@ -1,3 +1,3 @@
 package moe.ganen.jikankt.exception
 
-class TooManyRequestException() : Exception()
+class TooManyRequestException : Exception()

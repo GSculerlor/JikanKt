@@ -131,4 +131,24 @@ object JikanKt {
         gson.deserialize(restClient.request("person/$id/pictures"), PersonPictures::class.java)
 
     //endregion
+
+    //region Characters
+
+    /**
+     * Function to get character by it's MyAnimeList id
+     * @param id: MyAnimeList id of the character.
+     * @return Character with given MyAnimeList id.
+     */
+    suspend fun getCharacter(id: Int): moe.ganen.jikankt.models.character.Character =
+        gson.deserialize(restClient.request("character/$id"), moe.ganen.jikankt.models.character.Character::class.java)
+
+    /**
+     * Function to get character's pictures by it's MyAnimeList id
+     * @param id: MyAnimeList id of the character.
+     * @return List of pictures of the character with given MyAnimeList id.
+     */
+    suspend fun getCharacterPictures(id: Int): CharacterPictures =
+        gson.deserialize(restClient.request("character/$id/pictures"), CharacterPictures::class.java)
+
+    //endregion
 }
