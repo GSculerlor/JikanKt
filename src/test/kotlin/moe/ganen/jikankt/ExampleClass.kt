@@ -2,12 +2,11 @@ package moe.ganen.jikankt
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
-import moe.ganen.jikankt.connection.RestClient
+import moe.ganen.jikankt.models.base.Entity
 
 fun main() {
-    val client = RestClient()
     runBlocking {
-        val clientTest = client.request("/anime/38992")
+        val clientTest: Entity = JikanKt.getSeasonLater()
         println(clientTest)
         delay(5000)
     }

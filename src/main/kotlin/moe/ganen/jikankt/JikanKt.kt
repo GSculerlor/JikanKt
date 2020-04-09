@@ -151,4 +151,31 @@ object JikanKt {
         gson.deserialize(restClient.request("character/$id/pictures"), CharacterPictures::class.java)
 
     //endregion
+
+    //region Season
+
+    /**
+     * Function to get anime list by it's season.
+     * @param year: Year of the season.
+     * @param season: season type (winter, spring, etc).
+     * @return Anime with given MyAnimeList id.
+     */
+    suspend fun getSeason(year: Int, season: SeasonType): Season =
+        gson.deserialize(restClient.request("season/$year/$season"), Season::class.java)
+
+    /**
+     * Function to get archived season on MyAnimeList.
+     * @return Anime with given MyAnimeList id.
+     */
+    suspend fun getSeasonArchive(): SeasonArchives =
+        gson.deserialize(restClient.request("season/archive"), SeasonArchives::class.java)
+
+    /**
+     * Function to get later season anime list.
+     * @return Anime with given MyAnimeList id.
+     */
+    suspend fun getSeasonLater(): Season =
+        gson.deserialize(restClient.request("season/later"), Season::class.java)
+
+    //endregion
 }
