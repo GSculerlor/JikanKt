@@ -161,7 +161,7 @@ object JikanKt {
      * @return List of anime that airing on that season.
      */
     suspend fun getSeason(year: Int, season: SeasonType): Season =
-        gson.deserialize(restClient.request("season/$year/$season"), Season::class.java)
+        gson.deserialize(restClient.request("season/$year/${season.name.toLowerCase()}"), Season::class.java)
 
     /**
      * Function to get archived season on MyAnimeList.
@@ -193,7 +193,7 @@ object JikanKt {
      * @return List of anime that airing on that day.
      */
     suspend fun getSchedule(day: Day): Schedule =
-        gson.deserialize(restClient.request("schedule/$day"), Schedule::class.java)
+        gson.deserialize(restClient.request("schedule/${day.name.toLowerCase()}"), Schedule::class.java)
 
     //endregion
 
