@@ -158,24 +158,42 @@ object JikanKt {
      * Function to get anime list by it's season.
      * @param year: Year of the season.
      * @param season: season type (winter, spring, etc).
-     * @return Anime with given MyAnimeList id.
+     * @return List of anime that airing on that season.
      */
     suspend fun getSeason(year: Int, season: SeasonType): Season =
         gson.deserialize(restClient.request("season/$year/$season"), Season::class.java)
 
     /**
      * Function to get archived season on MyAnimeList.
-     * @return Anime with given MyAnimeList id.
+     * @return List of archived season.
      */
     suspend fun getSeasonArchive(): SeasonArchives =
         gson.deserialize(restClient.request("season/archive"), SeasonArchives::class.java)
 
     /**
      * Function to get later season anime list.
-     * @return Anime with given MyAnimeList id.
+     * @return List of anime that airing on next season.
      */
     suspend fun getSeasonLater(): Season =
         gson.deserialize(restClient.request("season/later"), Season::class.java)
+
+    //endregion
+
+    //region Schedule
+
+    /**
+     * Function to get all anime schedule in this season.
+     * @return List of day consist of anime list that airing on that day.
+     */
+    suspend fun getSchedule(): Schedule =
+        gson.deserialize(restClient.request("schedule"), Schedule::class.java)
+
+    /**
+     * Function to get all anime schedule in this season filtered by day.
+     * @return List of anime that airing on that day.
+     */
+    suspend fun getSchedule(day: Day): Schedule =
+        gson.deserialize(restClient.request("schedule/$day"), Schedule::class.java)
 
     //endregion
 }
