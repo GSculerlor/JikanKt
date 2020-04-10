@@ -196,4 +196,56 @@ object JikanKt {
         gson.deserialize(restClient.request("schedule/$day"), Schedule::class.java)
 
     //endregion
+
+    //region Top
+
+    /**
+     * Function to get all top anime on MyAnimeList.
+     * @param page: Optional, default is 1. Index of page, each page contain 50 items.
+     * @param subtype: Optional, subtype type (upcoming, airing, etc).
+     * @return List of top anime on MyAnimeList.
+     */
+    suspend fun getTopAnime(page: Int? = 1, subtype: TopSubtype? = TopSubtype.NONE): TopAnime =
+        gson.deserialize(
+            restClient.request("top/anime/$page/${if (subtype == TopSubtype.NONE) "" else subtype?.name?.toLowerCase()}"),
+            TopAnime::class.java
+        )
+
+    /**
+     * Function to get all top manga on MyAnimeList.
+     * @param page: Optional, default is 1. Index of page, each page contain 50 items.
+     * @param subtype: Optional, subtype type (novel, manga, etc).
+     * @return List of top manga on MyAnimeList.
+     */
+    suspend fun getTopManga(page: Int? = 1, subtype: TopSubtype? = TopSubtype.NONE): TopManga =
+        gson.deserialize(
+            restClient.request("top/manga/$page/${if (subtype == TopSubtype.NONE) "" else subtype?.name?.toLowerCase()}"),
+            TopManga::class.java
+        )
+
+    /**
+     * Function to get all top characters on MyAnimeList.
+     * @param page: Optional, default is 1. Index of page, each page contain 50 items.
+     * @param subtype: Optional, subtype type (bypopularity, favorite).
+     * @return List of top characters on MyAnimeList.
+     */
+    suspend fun getTopCharacters(page: Int? = 1, subtype: TopSubtype? = TopSubtype.NONE): TopCharacters =
+        gson.deserialize(
+            restClient.request("top/characters/$page/${if (subtype == TopSubtype.NONE) "" else subtype?.name?.toLowerCase()}"),
+            TopCharacters::class.java
+        )
+
+    /**
+     * Function to get all top people on MyAnimeList.
+     * @param page: Optional, default is 1. Index of page, each page contain 50 items.
+     * @param subtype: Optional, subtype type (bypopularity, favorite).
+     * @return List of top people on MyAnimeList.
+     */
+    suspend fun getTopPeople(page: Int? = 1, subtype: TopSubtype? = TopSubtype.NONE): TopPeople =
+        gson.deserialize(
+            restClient.request("top/people/$page/${if (subtype == TopSubtype.NONE) "" else subtype?.name?.toLowerCase()}"),
+            TopPeople::class.java
+        )
+
+    //endregion
 }
