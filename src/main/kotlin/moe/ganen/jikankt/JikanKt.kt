@@ -248,4 +248,21 @@ object JikanKt {
         )
 
     //endregion
+
+    //region Genre
+
+    /**
+     * Function to get genre detail on MyAnimeList.
+     * @param requestType: Request type (anime, manga).
+     * @param genreId: OGenre ID from MyAnimeList.
+     * @param page: Optional, default is 1. Index of page, each page contain 50 items.
+     * @return Genre detail on MyAnimeList with list of anime/manga on that genre, paginated.
+     */
+    suspend fun getGenreType(requestType: RequestType, genreId: Int, page: Int? = 1): Genre =
+        gson.deserialize(
+            restClient.request("genre/${requestType.name.toLowerCase()}/$genreId/$page"),
+            Genre::class.java
+        )
+
+    //endregion
 }
