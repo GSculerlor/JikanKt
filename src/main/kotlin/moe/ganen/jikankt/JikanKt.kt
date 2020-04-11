@@ -4,6 +4,21 @@ import com.google.gson.GsonBuilder
 import moe.ganen.jikankt.connection.RestClient
 import moe.ganen.jikankt.models.anime.*
 import moe.ganen.jikankt.models.base.Entity
+import moe.ganen.jikankt.models.character.CharacterPictures
+import moe.ganen.jikankt.models.club.Club
+import moe.ganen.jikankt.models.club.ClubMembers
+import moe.ganen.jikankt.models.genre.Genre
+import moe.ganen.jikankt.models.genre.RequestType
+import moe.ganen.jikankt.models.person.Person
+import moe.ganen.jikankt.models.person.PersonPictures
+import moe.ganen.jikankt.models.prod.Magazine
+import moe.ganen.jikankt.models.prod.Producer
+import moe.ganen.jikankt.models.schedule.Day
+import moe.ganen.jikankt.models.schedule.Schedule
+import moe.ganen.jikankt.models.season.Season
+import moe.ganen.jikankt.models.season.SeasonArchives
+import moe.ganen.jikankt.models.season.SeasonType
+import moe.ganen.jikankt.models.top.*
 import moe.ganen.jikankt.utils.InterfaceAdapter
 import moe.ganen.jikankt.utils.deserialize
 

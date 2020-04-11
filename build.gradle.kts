@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.GSculerlor"
-version = "0.0.1"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
