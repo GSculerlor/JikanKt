@@ -297,4 +297,31 @@ object JikanKt {
         )
 
     //endregion
+
+    //region Club
+
+    /**
+     * A single club object with all its details.
+     * @param clubId: Club ID from MyAnimeList.
+     * @return Club details.
+     */
+    suspend fun getClub(clubId: Int): Club =
+        gson.deserialize(
+            restClient.request("club/$clubId"),
+            Club::class.java
+        )
+
+    /**
+     * Fetches list of club members.
+     * @param clubId: Club ID from MyAnimeList.
+     * @param page: Optional, default is 1. Index of page.
+     * @return list of club members.
+     */
+    suspend fun getClubMembers(clubId: Int, page: Int? = 1): ClubMembers =
+        gson.deserialize(
+            restClient.request("club/$clubId/members/$page"),
+            ClubMembers::class.java
+        )
+
+    //endregion
 }
