@@ -254,14 +254,46 @@ object JikanKt {
     /**
      * Function to get genre detail on MyAnimeList.
      * @param requestType: Request type (anime, manga).
-     * @param genreId: OGenre ID from MyAnimeList.
-     * @param page: Optional, default is 1. Index of page, each page contain 50 items.
+     * @param genreId: Genre ID from MyAnimeList.
+     * @param page: Optional, default is 1. Index of page.
      * @return Genre detail on MyAnimeList with list of anime/manga on that genre, paginated.
      */
     suspend fun getGenreType(requestType: RequestType, genreId: Int, page: Int? = 1): Genre =
         gson.deserialize(
             restClient.request("genre/${requestType.name.toLowerCase()}/$genreId/$page"),
             Genre::class.java
+        )
+
+    //endregion
+
+    //region Producer
+
+    /**
+     * Function to get list of anime based on their producer.
+     * @param producerId: Producer ID from MyAnimeList.
+     * @param page: Optional, default is 1. Index of page.
+     * @return Metadata and anime list of that producer.
+     */
+    suspend fun getProducer(producerId: Int, page: Int? = 1): Producer =
+        gson.deserialize(
+            restClient.request("producer/$producerId/$page"),
+            Producer::class.java
+        )
+
+    //endregion
+
+    //region Magazine
+
+    /**
+     * Function to get list of manga based on their magazine/serializer/publisher.
+     * @param magazineId: Magazine ID from MyAnimeList.
+     * @param page: Optional, default is 1. Index of page.
+     * @return Metadata and anime list of that magazine/serializer/publisher.
+     */
+    suspend fun getMagazine(magazineId: Int, page: Int? = 1): Magazine =
+        gson.deserialize(
+            restClient.request("magazine/$magazineId/$page"),
+            Magazine::class.java
         )
 
     //endregion
