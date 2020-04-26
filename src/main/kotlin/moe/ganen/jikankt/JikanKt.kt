@@ -15,6 +15,8 @@ import moe.ganen.jikankt.models.prod.Magazine
 import moe.ganen.jikankt.models.prod.Producer
 import moe.ganen.jikankt.models.schedule.Day
 import moe.ganen.jikankt.models.schedule.Schedule
+import moe.ganen.jikankt.models.search.AnimeSearchQuery
+import moe.ganen.jikankt.models.search.AnimeSearchResult
 import moe.ganen.jikankt.models.season.Season
 import moe.ganen.jikankt.models.season.SeasonArchives
 import moe.ganen.jikankt.models.season.SeasonType
@@ -337,6 +339,54 @@ object JikanKt {
             restClient.request("club/$clubId/members/$page"),
             ClubMembers::class.java
         )
+
+    //endregion
+
+    //region Search
+
+    //region Anime
+
+    /**
+     * Search results for the query.
+     * NOTE: MyAnimeList only processes queries with a minimum of 3 letters.
+     * @param query: String that will be the query. For UTF8 characters, percentage encoded and queries including back slashes
+     * @param page: Optional, default is 1. Index of page.
+     * @param additionalQuery: Optional, additional query.
+     * @return list of club members.
+     */
+    suspend fun searchAnime(
+        query: String,
+        page: Int? = 1,
+        additionalQuery: AnimeSearchQuery? = null
+    ): AnimeSearchResult {
+        val formattedQuery = query.replace(" ", "_")
+        val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
+
+        return gson.deserialize(
+            restClient.request("search/anime/$page?q=$formattedQuery$formattedAdditionalQuery"),
+            AnimeSearchResult::class.java
+        )
+    }
+
+    /**
+     * Search results for the query.
+     * @param page: Optional, default is 1. Index of page.
+     * @param additionalQuery: Optional, additional query.
+     * @return list of club members.
+     */
+    suspend fun searchAnime(
+        page: Int? = 1,
+        additionalQuery: AnimeSearchQuery? = null
+    ): AnimeSearchResult {
+        val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
+
+        return gson.deserialize(
+            restClient.request("search/anime/$page?$formattedAdditionalQuery"),
+            AnimeSearchResult::class.java
+        )
+    }
+
+    //endregion
 
     //endregion
 }
