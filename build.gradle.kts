@@ -4,9 +4,6 @@ plugins {
     `maven-publish`
 }
 
-group = "com.github.GSculerlor"
-version = "1.1.0"
-
 repositories {
     mavenCentral()
     jcenter()
