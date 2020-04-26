@@ -11,6 +11,7 @@ enum class AnimeType {
 }
 
 enum class MangaType {
+    All,
     Manga,
     Novel,
     Oneshot,

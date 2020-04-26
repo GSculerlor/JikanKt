@@ -17,6 +17,8 @@ import moe.ganen.jikankt.models.schedule.Day
 import moe.ganen.jikankt.models.schedule.Schedule
 import moe.ganen.jikankt.models.search.AnimeSearchQuery
 import moe.ganen.jikankt.models.search.AnimeSearchResult
+import moe.ganen.jikankt.models.search.MangaSearchQuery
+import moe.ganen.jikankt.models.search.MangaSearchResult
 import moe.ganen.jikankt.models.season.Season
 import moe.ganen.jikankt.models.season.SeasonArchives
 import moe.ganen.jikankt.models.season.SeasonType
@@ -352,12 +354,12 @@ object JikanKt {
      * @param query: String that will be the query. For UTF8 characters, percentage encoded and queries including back slashes
      * @param page: Optional, default is 1. Index of page.
      * @param additionalQuery: Optional, additional query.
-     * @return list of club members.
+     * @return list of anime that satisfy all the queries.
      */
     suspend fun searchAnime(
         query: String,
-        page: Int? = 1,
-        additionalQuery: AnimeSearchQuery? = null
+        additionalQuery: AnimeSearchQuery? = null,
+        page: Int? = 1
     ): AnimeSearchResult {
         val formattedQuery = query.replace(" ", "_")
         val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
@@ -372,17 +374,61 @@ object JikanKt {
      * Search results for the query.
      * @param page: Optional, default is 1. Index of page.
      * @param additionalQuery: Optional, additional query.
-     * @return list of club members.
+     * @return list of anime that satisfy all the queries.
      */
     suspend fun searchAnime(
-        page: Int? = 1,
-        additionalQuery: AnimeSearchQuery? = null
+        additionalQuery: AnimeSearchQuery? = null,
+        page: Int? = 1
     ): AnimeSearchResult {
         val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
 
         return gson.deserialize(
             restClient.request("search/anime/$page?$formattedAdditionalQuery"),
             AnimeSearchResult::class.java
+        )
+    }
+
+    //endregion
+
+    //region Manga
+
+    /**
+     * Search results for the query.
+     * NOTE: MyAnimeList only processes queries with a minimum of 3 letters.
+     * @param query: String that will be the query. For UTF8 characters, percentage encoded and queries including back slashes
+     * @param page: Optional, default is 1. Index of page.
+     * @param additionalQuery: Optional, additional query.
+     * @return list of anime that satisfy all the queries.
+     */
+    suspend fun searchManga(
+        query: String,
+        additionalQuery: MangaSearchQuery? = null,
+        page: Int? = 1
+    ): MangaSearchResult {
+        val formattedQuery = query.replace(" ", "_")
+        val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
+
+        return gson.deserialize(
+            restClient.request("search/manga/$page?q=$formattedQuery$formattedAdditionalQuery"),
+            MangaSearchResult::class.java
+        )
+    }
+
+    /**
+     * Search results for the query.
+     * @param page: Optional, default is 1. Index of page.
+     * @param additionalQuery: Optional, additional query.
+     * @return list of anime that satisfy all the queries.
+     */
+    suspend fun searchManga(
+        additionalQuery: MangaSearchQuery? = null,
+        page: Int? = 1
+    ): MangaSearchResult {
+        val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
+
+        return gson.deserialize(
+            restClient.request("search/manga/$page?$formattedAdditionalQuery"),
+            MangaSearchResult::class.java
         )
     }
 
