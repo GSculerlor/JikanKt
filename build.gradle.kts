@@ -1,10 +1,8 @@
 plugins {
     kotlin("jvm") version "1.3.61"
     maven
+    `maven-publish`
 }
-
-group = "com.github.GSculerlor"
-version = "1.1.0"
 
 repositories {
     mavenCentral()
@@ -42,5 +40,25 @@ tasks {
     }
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("default") {
+            from(components["java"])
+            // Include any other artifacts here, like javadocs
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/my-username/my-library")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
     }
 }
