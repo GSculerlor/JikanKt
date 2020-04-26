@@ -1,7 +1,6 @@
 plugins {
     kotlin("jvm") version "1.3.61"
     maven
-    `maven-publish`
 }
 
 repositories {
@@ -10,6 +9,9 @@ repositories {
     maven("https://kotlin.bintray.com/ktor")
     maven("https://kotlin.bintray.com/kotlinx")
 }
+
+group = "com.github.GSculerlor"
+version = "1.1.0"
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
@@ -40,24 +42,5 @@ tasks {
     }
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
-    }
-}
-
-publishing {
-    publications {
-        register("gpr", MavenPublication::class) {
-            from(components["java"])
-        }
-    }
-
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/GSculerlor/JikanKt")
-            credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
-            }
-        }
     }
 }
