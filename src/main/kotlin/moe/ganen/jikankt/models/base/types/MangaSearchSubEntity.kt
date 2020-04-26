@@ -62,7 +62,7 @@ data class MangaSearchSubEntity(
     val volumes: Int? = null,
 
     /**
-     * Anime's members count on MyAnimeList.
+     * Manga's members count on MyAnimeList.
      */
     @SerializedName("members")
     val members: Int? = null,
