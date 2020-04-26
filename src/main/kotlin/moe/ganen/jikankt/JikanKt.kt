@@ -23,10 +23,10 @@ import moe.ganen.jikankt.models.season.Season
 import moe.ganen.jikankt.models.season.SeasonArchives
 import moe.ganen.jikankt.models.season.SeasonType
 import moe.ganen.jikankt.models.top.*
-import moe.ganen.jikankt.models.user.HistoryType
-import moe.ganen.jikankt.models.user.User
-import moe.ganen.jikankt.models.user.UserFriends
-import moe.ganen.jikankt.models.user.UserHistory
+import moe.ganen.jikankt.models.user.*
+import moe.ganen.jikankt.models.user.enums.AnimeStatusType
+import moe.ganen.jikankt.models.user.enums.HistoryType
+import moe.ganen.jikankt.models.user.enums.MangaStatusType
 import moe.ganen.jikankt.utils.InterfaceAdapter
 import moe.ganen.jikankt.utils.deserialize
 
@@ -474,6 +474,38 @@ object JikanKt {
     suspend fun getUserFriends(username: String, page: Int = 1): UserFriends = gson.deserialize(
         restClient.request("user/$username/friends/$page"),
         UserFriends::class.java
+    )
+
+    /**
+     * Fetches MyAnimeList user's anime list.
+     * @param username: User's username on MyAnimeList.
+     * @param filter: Optional, filter list.
+     * @param page: Optional, default is 1. Index of page.
+     * @return User's anime list.
+     */
+    suspend fun getUserAnimeList(
+        username: String,
+        filter: AnimeStatusType = AnimeStatusType.All,
+        page: Int = 1
+    ): UserAnimeList = gson.deserialize(
+        restClient.request("user/$username/animelist/${filter.name.toLowerCase()}/$page"),
+        UserAnimeList::class.java
+    )
+
+    /**
+     * Fetches MyAnimeList user's manga list.
+     * @param username: User's username on MyAnimeList.
+     * @param filter: Optional, filter list.
+     * @param page: Optional, default is 1. Index of page.
+     * @return User's manga list.
+     */
+    suspend fun getUserMangaList(
+        username: String,
+        filter: MangaStatusType = MangaStatusType.All,
+        page: Int = 1
+    ): UserMangaList = gson.deserialize(
+        restClient.request("user/$username/mangalist/${filter.name.toLowerCase()}/$page"),
+        UserMangaList::class.java
     )
 
     //endregion
