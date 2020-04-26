@@ -25,6 +25,7 @@ import moe.ganen.jikankt.models.season.SeasonType
 import moe.ganen.jikankt.models.top.*
 import moe.ganen.jikankt.models.user.HistoryType
 import moe.ganen.jikankt.models.user.User
+import moe.ganen.jikankt.models.user.UserFriends
 import moe.ganen.jikankt.models.user.UserHistory
 import moe.ganen.jikankt.utils.InterfaceAdapter
 import moe.ganen.jikankt.utils.deserialize
@@ -454,15 +455,25 @@ object JikanKt {
     )
 
     /**
-     * Fetches MyAnimeList user related data.
-     * Note: About is returned in HTML as MyAnimeList allows custom "about" sections for users that can consist of images,
-     * formatting, etc.
+     * Fetches MyAnimeList user's history.
      * @param username: User's username on MyAnimeList.
+     * @param type: History type (Anime, manga).
      * @return User's profile data.
      */
     suspend fun getUserHistory(username: String, type: HistoryType = HistoryType.All): UserHistory = gson.deserialize(
         restClient.request("user/$username/history/${if (type != HistoryType.All) type.name.toLowerCase() else ""}"),
         UserHistory::class.java
+    )
+
+    /**
+     * Fetches MyAnimeList user's friend.
+     * @param username: User's username on MyAnimeList.
+     * @param page: Optional, default is 1. Index of page.
+     * @return User's profile data.
+     */
+    suspend fun getUserFriends(username: String, page: Int = 1): UserFriends = gson.deserialize(
+        restClient.request("user/$username/friends/$page"),
+        UserFriends::class.java
     )
 
     //endregion
