@@ -23,6 +23,10 @@ import moe.ganen.jikankt.models.season.Season
 import moe.ganen.jikankt.models.season.SeasonArchives
 import moe.ganen.jikankt.models.season.SeasonType
 import moe.ganen.jikankt.models.top.*
+import moe.ganen.jikankt.models.user.*
+import moe.ganen.jikankt.models.user.enums.AnimeStatusType
+import moe.ganen.jikankt.models.user.enums.HistoryType
+import moe.ganen.jikankt.models.user.enums.MangaStatusType
 import moe.ganen.jikankt.utils.InterfaceAdapter
 import moe.ganen.jikankt.utils.deserialize
 
@@ -361,7 +365,7 @@ object JikanKt {
         additionalQuery: AnimeSearchQuery? = null,
         page: Int? = 1
     ): AnimeSearchResult {
-        val formattedQuery = query.replace(" ", "_")
+        val formattedQuery = query.replace(" ", "%20")
         val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
 
         return gson.deserialize(
@@ -405,7 +409,7 @@ object JikanKt {
         additionalQuery: MangaSearchQuery? = null,
         page: Int? = 1
     ): MangaSearchResult {
-        val formattedQuery = query.replace(" ", "_")
+        val formattedQuery = query.replace(" ", "%20")
         val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
 
         return gson.deserialize(
@@ -433,6 +437,124 @@ object JikanKt {
     }
 
     //endregion
+
+    //endregion
+
+    //region User
+
+    /**
+     * Fetches MyAnimeList user related data.
+     * Note: About is returned in HTML as MyAnimeList allows custom "about" sections for users that can consist of images,
+     * formatting, etc.
+     * @param username: User's username on MyAnimeList.
+     * @return User's profile data.
+     */
+    suspend fun getUser(username: String): User = gson.deserialize(
+        restClient.request("user/$username/"),
+        User::class.java
+    )
+
+    /**
+     * Fetches MyAnimeList user's history.
+     * @param username: User's username on MyAnimeList.
+     * @param type: History type (Anime, manga).
+     * @return User's profile data.
+     */
+    suspend fun getUserHistory(username: String, type: HistoryType = HistoryType.All): UserHistory = gson.deserialize(
+        restClient.request("user/$username/history/${if (type != HistoryType.All) type.name.toLowerCase() else ""}"),
+        UserHistory::class.java
+    )
+
+    /**
+     * Fetches MyAnimeList user's friend.
+     * @param username: User's username on MyAnimeList.
+     * @param page: Optional, default is 1. Index of page.
+     * @return User's profile data.
+     */
+    suspend fun getUserFriends(username: String, page: Int = 1): UserFriends = gson.deserialize(
+        restClient.request("user/$username/friends/$page"),
+        UserFriends::class.java
+    )
+
+    /**
+     * Fetches MyAnimeList user's anime list.
+     * @param username: User's username on MyAnimeList.
+     * @param filter: Optional, filter list.
+     * @param page: Optional, default is 1. Index of page.
+     * @return User's anime list.
+     */
+    suspend fun getUserAnimeList(
+        username: String,
+        filter: AnimeStatusType = AnimeStatusType.All,
+        page: Int = 1
+    ): UserAnimeList = gson.deserialize(
+        restClient.request("user/$username/animelist/${filter.name.toLowerCase()}/$page"),
+        UserAnimeList::class.java
+    )
+
+    /**
+     * Fetches MyAnimeList user's manga list.
+     * @param username: User's username on MyAnimeList.
+     * @param filter: Optional, filter list.
+     * @param page: Optional, default is 1. Index of page.
+     * @return User's manga list.
+     */
+    suspend fun getUserMangaList(
+        username: String,
+        filter: MangaStatusType = MangaStatusType.All,
+        page: Int = 1
+    ): UserMangaList = gson.deserialize(
+        restClient.request("user/$username/mangalist/${filter.name.toLowerCase()}/$page"),
+        UserMangaList::class.java
+    )
+
+    /**
+     * Fetches MyAnimeList user's anime list.
+     * @param username: User's username on MyAnimeList.
+     * @param query: Query to filter by.
+     * @param additionalQuery: Optional, additional query.
+     * @param page: Optional, default is 1. Index of page.
+     * @return User's anime list.
+     */
+    suspend fun getUserAnimeList(
+        username: String,
+        query: String,
+        page: Int? = 1,
+        additionalQuery: AnimeListSearchQuery? = null
+    ): UserAnimeList {
+        val formattedQuery = query.replace(" ", "%20")
+        val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
+        val formattedPage = "&page=${page}"
+
+        return gson.deserialize(
+            restClient.request("user/$username/animelist?q=${formattedQuery}${formattedAdditionalQuery}${formattedPage}"),
+            UserAnimeList::class.java
+        )
+    }
+
+    /**
+     * Fetches MyAnimeList user's manga list.
+     * @param username: User's username on MyAnimeList.
+     * @param query: Query to filter by.
+     * @param additionalQuery: Optional, additional query.
+     * @param page: Optional, default is 1. Index of page.
+     * @return User's manga list.
+     */
+    suspend fun getUserMangaList(
+        username: String,
+        query: String,
+        page: Int? = 1,
+        additionalQuery: MangaListSearchQuery? = null
+    ): UserMangaList {
+        val formattedQuery = query.replace(" ", "%20")
+        val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
+        val formattedPage = "&page=${page}"
+
+        return gson.deserialize(
+            restClient.request("user/$username/mangalist?q=${formattedQuery}${formattedAdditionalQuery}${formattedPage}"),
+            UserMangaList::class.java
+        )
+    }
 
     //endregion
 }

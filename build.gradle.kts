@@ -11,14 +11,14 @@ repositories {
 }
 
 group = "com.github.GSculerlor"
-version = "1.1.0"
+version = "1.1.2"
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
     //Coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.2.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.3.5")
 
     //Ktor
     implementation("io.ktor:ktor-client-core:1.2.1")

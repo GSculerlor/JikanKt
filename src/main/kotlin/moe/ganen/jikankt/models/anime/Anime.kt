@@ -3,10 +3,10 @@ package moe.ganen.jikankt.models.anime
 import com.google.gson.annotations.SerializedName
 import moe.ganen.jikankt.models.base.Entity
 import moe.ganen.jikankt.models.base.MalEntity
-import moe.ganen.jikankt.models.base.enum.AnimeType
 import moe.ganen.jikankt.models.base.types.MalSubEntity
 import moe.ganen.jikankt.models.base.types.RelatedAnime
 import moe.ganen.jikankt.models.base.types.TimeInterval
+import moe.ganen.jikankt.models.search.enums.AnimeType
 
 /**
  * Anime data class.

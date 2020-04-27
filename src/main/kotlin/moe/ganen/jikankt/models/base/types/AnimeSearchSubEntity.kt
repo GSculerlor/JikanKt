@@ -2,7 +2,7 @@ package moe.ganen.jikankt.models.base.types
 
 import com.google.gson.annotations.SerializedName
 import moe.ganen.jikankt.models.base.MalEntity
-import moe.ganen.jikankt.models.base.enum.AnimeType
+import moe.ganen.jikankt.models.search.enums.AnimeType
 import java.util.*
 
 data class AnimeSearchSubEntity(

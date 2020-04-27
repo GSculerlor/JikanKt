@@ -6,7 +6,8 @@ enum class AnimeStatus {
     Completed,
     Complete,
     TBA,
-    Upcoming
+    Upcoming,
+    NYA
 }
 
 enum class MangaStatus {
@@ -15,5 +16,6 @@ enum class MangaStatus {
     Completed,
     Complete,
     TBP,
-    Upcoming
+    Upcoming,
+    NYP
 }
