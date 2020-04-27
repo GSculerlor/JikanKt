@@ -365,7 +365,7 @@ object JikanKt {
         additionalQuery: AnimeSearchQuery? = null,
         page: Int? = 1
     ): AnimeSearchResult {
-        val formattedQuery = query.replace(" ", "_")
+        val formattedQuery = query.replace(" ", "%20")
         val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
 
         return gson.deserialize(
@@ -409,7 +409,7 @@ object JikanKt {
         additionalQuery: MangaSearchQuery? = null,
         page: Int? = 1
     ): MangaSearchResult {
-        val formattedQuery = query.replace(" ", "_")
+        val formattedQuery = query.replace(" ", "%20")
         val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
 
         return gson.deserialize(
@@ -507,6 +507,54 @@ object JikanKt {
         restClient.request("user/$username/mangalist/${filter.name.toLowerCase()}/$page"),
         UserMangaList::class.java
     )
+
+    /**
+     * Fetches MyAnimeList user's anime list.
+     * @param username: User's username on MyAnimeList.
+     * @param query: Query to filter by.
+     * @param additionalQuery: Optional, additional query.
+     * @param page: Optional, default is 1. Index of page.
+     * @return User's anime list.
+     */
+    suspend fun getUserAnimeList(
+        username: String,
+        query: String,
+        page: Int? = 1,
+        additionalQuery: AnimeListSearchQuery? = null
+    ): UserAnimeList {
+        val formattedQuery = query.replace(" ", "%20")
+        val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
+        val formattedPage = "&page=${page}"
+
+        return gson.deserialize(
+            restClient.request("user/$username/animelist?q=${formattedQuery}${formattedAdditionalQuery}${formattedPage}"),
+            UserAnimeList::class.java
+        )
+    }
+
+    /**
+     * Fetches MyAnimeList user's manga list.
+     * @param username: User's username on MyAnimeList.
+     * @param query: Query to filter by.
+     * @param additionalQuery: Optional, additional query.
+     * @param page: Optional, default is 1. Index of page.
+     * @return User's manga list.
+     */
+    suspend fun getUserMangaList(
+        username: String,
+        query: String,
+        page: Int? = 1,
+        additionalQuery: MangaListSearchQuery? = null
+    ): UserMangaList {
+        val formattedQuery = query.replace(" ", "%20")
+        val formattedAdditionalQuery = additionalQuery?.toString() ?: ""
+        val formattedPage = "&page=${page}"
+
+        return gson.deserialize(
+            restClient.request("user/$username/mangalist?q=${formattedQuery}${formattedAdditionalQuery}${formattedPage}"),
+            UserMangaList::class.java
+        )
+    }
 
     //endregion
 }
