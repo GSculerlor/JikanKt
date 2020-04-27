@@ -12,7 +12,7 @@ repositories {
 }
     
 dependencies {
-    implementation 'com.github.GSculerlor:JikanKt:1.0.0'
+    implementation 'com.github.GSculerlor:JikanKt:1.1.2'
 }
 ```
 with Maven
@@ -27,7 +27,7 @@ with Maven
 <dependency>
     <groupId>com.github.GSculerlor</groupId>
     <artifactId>JikanKt</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.2</version>
 </dependency>
 ```
 
@@ -40,6 +40,9 @@ fun main() {
     }
 }
 ```
+# Release
+For latest release or to check the changelogs, please check Release tab.
+
 # Status
 JikanKt is under heavily development after revived from eternal slumber. At this point, some of the endpoints maybe still not wrapped yet, so please stay tune!
 Also currently it only run on JVM, but don't worry, Kotlin multiplatform is already planned on next major release! Also test will added once all of the endpoint is mapped which is very very soon!
