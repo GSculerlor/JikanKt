@@ -32,6 +32,6 @@ open class JikanClient {
 
     companion object {
         private const val JIKANKT_NAME = "JikanKt"
-        private const val JIKANKT_VERSION = "1.1.2"
+        private const val JIKANKT_VERSION = "1.1.3"
     }
 }
