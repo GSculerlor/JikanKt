@@ -458,6 +458,29 @@ object JikanKt {
 
     //endregion
 
+    //region Characters
+
+    /**
+     * Search results for the query.
+     * NOTE: MyAnimeList only processes queries with a minimum of 3 letters.
+     * @param query: String that will be the query. For UTF8 characters, percentage encoded and queries including back slashes
+     * @param page: Optional, default is 1. Index of page.
+     * @return list of anime that satisfy all the queries.
+     */
+    suspend fun searchPeople(
+        query: String,
+        page: Int? = 1
+    ): PeopleSearchResult {
+        val formattedQuery = query.replace(" ", "%20")
+
+        return gson.deserialize(
+            restClient.request("search/people/$page?q=$formattedQuery"),
+            PeopleSearchResult::class.java
+        )
+    }
+
+    //endregion
+
     //region
 
     //endregion

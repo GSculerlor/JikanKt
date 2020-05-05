@@ -6,7 +6,7 @@ import moe.ganen.jikankt.models.base.Entity
 
 fun main() {
     runBlocking {
-        val clientTest: Entity = JikanKt.getUserFriends("GSculerlor")
+        val clientTest: Entity = JikanKt.searchCharacter("bjir")
         println(clientTest)
         delay(5000)
     }

@@ -4,13 +4,14 @@ import kotlinx.coroutines.runBlocking
 import moe.ganen.jikankt.exception.JikanException
 import moe.ganen.jikankt.models.base.types.CharacterSearchSubEntity
 import moe.ganen.jikankt.models.base.types.MalSubEntity
+import moe.ganen.jikankt.models.base.types.PeopleSearchSubEntity
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class TestCaseSearch {
 
     @Test
-    fun `test search Amatsukaze`() {
+    fun `test search character Amatsukaze`() {
         val expected = CharacterSearchSubEntity(
             malId = 140701,
             name = "Amatsukaze",
@@ -26,7 +27,7 @@ class TestCaseSearch {
     }
 
     @Test
-    fun `test multiple page result`() {
+    fun `test characters multiple page result`() {
         val expected = 6
         val result = runBlocking { JikanKt.searchCharacter("naruto").lastPage }
 
@@ -34,7 +35,26 @@ class TestCaseSearch {
     }
 
     @Test(expected = JikanException::class)
-    fun `test search random`() {
+    fun `test search random character`() {
         runBlocking { JikanKt.searchCharacter("Bjir").results?.get(0) }
+    }
+
+    @Test
+    fun `test search people Uesaka Sumire`() {
+        val expected = PeopleSearchSubEntity(
+            malId = 14441,
+            name = "Sumire Uesaka"
+        )
+
+        val result = runBlocking { JikanKt.searchPeople("Sumire Uesaka").results?.get(0) }
+
+        assertEquals(expected.malId, result?.malId)
+        assertEquals(expected.name, result?.name)
+    }
+
+    @Test()
+    fun `test search random people`() {
+        val result = runBlocking { JikanKt.searchPeople("Bjir").results }
+        assertEquals(0, result?.size)
     }
 }
