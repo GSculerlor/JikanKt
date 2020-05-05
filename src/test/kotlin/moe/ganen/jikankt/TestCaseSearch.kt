@@ -1,10 +1,12 @@
 package moe.ganen.jikankt
 
 import kotlinx.coroutines.runBlocking
+import moe.ganen.jikankt.connection.RestClient
 import moe.ganen.jikankt.exception.JikanException
 import moe.ganen.jikankt.models.base.types.CharacterSearchSubEntity
 import moe.ganen.jikankt.models.base.types.MalSubEntity
 import moe.ganen.jikankt.models.base.types.PeopleSearchSubEntity
+import moe.ganen.jikankt.models.search.CharacterSearchResult
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -34,9 +36,24 @@ class TestCaseSearch {
         assertEquals(expected, result)
     }
 
+    @Test
+    fun `test search random character return empty`() {
+        val jikan = JikanKt.apply {
+            restClient = RestClient(false)
+        }
+
+        val expected = CharacterSearchResult()
+        val result = runBlocking { jikan.searchCharacter("Bjir") }
+
+        assertEquals(expected, result)
+    }
+
     @Test(expected = JikanException::class)
-    fun `test search random character`() {
-        runBlocking { JikanKt.searchCharacter("Bjir").results?.get(0) }
+    fun `test search random character return exception`() {
+        val jikan = JikanKt.apply {
+            restClient = RestClient(true)
+        }
+        runBlocking { jikan.searchCharacter("Bjir").results?.get(0) }
     }
 
     @Test
@@ -52,7 +69,7 @@ class TestCaseSearch {
         assertEquals(expected.name, result?.name)
     }
 
-    @Test()
+    @Test
     fun `test search random people`() {
         val result = runBlocking { JikanKt.searchPeople("Bjir").results }
         assertEquals(0, result?.size)

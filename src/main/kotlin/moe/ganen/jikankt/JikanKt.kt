@@ -28,7 +28,7 @@ import moe.ganen.jikankt.utils.InterfaceAdapter
 import moe.ganen.jikankt.utils.deserialize
 
 object JikanKt {
-    private val restClient = RestClient()
+    internal var restClient = RestClient(false)
     private val gson = GsonBuilder().registerTypeAdapter(Entity::class.java, InterfaceAdapter<Entity>()).create()
 
     //region Anime
