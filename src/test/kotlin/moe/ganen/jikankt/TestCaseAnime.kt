@@ -1,5 +1,6 @@
 package moe.ganen.jikankt
 
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import moe.ganen.jikankt.models.anime.*
 import moe.ganen.jikankt.models.base.types.*
@@ -37,6 +38,8 @@ class TestCaseAnime {
         assertEquals(expected.producers?.get(0)?.malId, result.producers?.get(0)?.malId)
         assertEquals(expected.openingThemes?.get(0), result.openingThemes?.get(0))
         assertEquals(expected.endingThemes?.get(0), result.endingThemes?.get(0))
+
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -44,6 +47,7 @@ class TestCaseAnime {
         val result = runBlocking { JikanKt.getAnime(2) }
 
         assertNull(result.title)
+        runBlocking { delay(1500) }
     }
 
     //endregion
@@ -80,6 +84,7 @@ class TestCaseAnime {
         assertEquals(secondExpected?.malId, secondResult?.malId)
         assertEquals(secondExpected?.name, secondResult?.name)
         assertEquals(secondExpected?.voiceActors?.get(0)?.name, secondResult?.voiceActors?.get(0)?.name)
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -112,6 +117,7 @@ class TestCaseAnime {
         assertEquals(secondExpected?.malId, secondResult?.malId)
         assertEquals(secondExpected?.name, secondResult?.name)
         assertEquals(secondExpected?.voiceActors?.get(0)?.name, secondResult?.voiceActors?.get(0)?.name)
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -119,6 +125,7 @@ class TestCaseAnime {
         val result = runBlocking { JikanKt.getAnimeCharactersStaff(2) }
 
         assertNull(result.characters)
+        runBlocking { delay(1500) }
     }
 
     //endregion
@@ -138,6 +145,7 @@ class TestCaseAnime {
         assertEquals(12, result.episodes?.count())
         assertEquals(expected.episodes?.get(0)?.title, result.episodes?.get(0)?.title)
         assertEquals(expected.episodes?.get(1)?.title, result.episodes?.get(1)?.title)
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -145,6 +153,7 @@ class TestCaseAnime {
         val result = runBlocking { JikanKt.getAnimeEpisodes(36098) }
 
         assertEquals(0, result.episodes?.count())
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -170,13 +179,15 @@ class TestCaseAnime {
 
         assertEquals(10, resultSecondPage.lastPage)
         assertEquals(expectedSecondPage.episodes?.get(0)?.title, resultSecondPage.episodes?.get(0)?.title)
+        runBlocking { delay(1500) }
     }
 
     @Test
     fun `test anime with bad ID episodes`() {
         val result = runBlocking { JikanKt.getAnimeEpisodes(2) }
 
-        assertNull(result.episodes)
+        assert(result.episodes.isNullOrEmpty())
+        runBlocking { delay(1500) }
     }
 
     //endregion
@@ -198,6 +209,7 @@ class TestCaseAnime {
         assertEquals(13, result.articles?.count())
         assertEquals(expected.articles?.get(0)?.url, result.articles?.get(0)?.url)
         assertEquals(expected.articles?.get(0)?.intro, result.articles?.get(0)?.intro)
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -205,6 +217,7 @@ class TestCaseAnime {
         val result = runBlocking { JikanKt.getAnimeNews(2) }
 
         assertNull(result.articles)
+        runBlocking { delay(1500) }
     }
 
     //endregion
@@ -226,6 +239,7 @@ class TestCaseAnime {
 
         assertEquals(4, result.pictures?.count())
         assertEquals(expected.pictures?.get(0), result.pictures?.get(0))
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -233,6 +247,7 @@ class TestCaseAnime {
         val result = runBlocking { JikanKt.getAnimePictures(2) }
 
         assertNull(result.pictures)
+        runBlocking { delay(1500) }
     }
 
     //endregion
@@ -256,6 +271,7 @@ class TestCaseAnime {
         assertEquals(0, result.episodes?.count())
         assertEquals(4, result.promo?.count())
         assertEquals(expected.promo?.get(0), result.promo?.get(0))
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -264,6 +280,7 @@ class TestCaseAnime {
 
         assertNull(result.episodes)
         assertNull(result.promo)
+        runBlocking { delay(1500) }
     }
 
     //endregion
@@ -278,6 +295,7 @@ class TestCaseAnime {
         assert(result.completed in 1600..1650)
         assert(result.onHold in 350..450)
         assert(result.dropped in 70..80)
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -285,6 +303,7 @@ class TestCaseAnime {
         val result = runBlocking { JikanKt.getAnimeStats(2) }
 
         assertNull(result.scorePage)
+        runBlocking { delay(1500) }
     }
 
     //endregion
@@ -306,6 +325,7 @@ class TestCaseAnime {
 
         assertEquals(15, result.topics?.count())
         assertEquals(expected.topics?.get(0)?.title, result.topics?.get(0)?.title)
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -313,6 +333,7 @@ class TestCaseAnime {
         val result = runBlocking { JikanKt.getAnimeForum(2) }
 
         assertNull(result.topics)
+        runBlocking { delay(1500) }
     }
 
     //endregion
@@ -324,6 +345,7 @@ class TestCaseAnime {
         val result = runBlocking { JikanKt.getAnimeMoreInfo(38040) }
 
         assertNull(result.moreInfo)
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -332,7 +354,8 @@ class TestCaseAnime {
             "Episode 492 is the second part of a two part special called Toriko x One Piece Collabo Special - a crossover with Toriko (2011).  The first part is Toriko (2011) episode 1.  The first part aired on Toriko's timeslot at 9:00 and the second part aired on One Piece's timeslot at 9:30.\r\nEpisode 542 is the second part of a two part special called Toriko x One Piece Collabo Special 2 - another crossover with Toriko (2011). The first part is Toriko (2011) episode 51. The first part aired on Toriko's timeslot at 9:00 and the second part aired on One Piece's timeslot at 9:30.\r\nEpisode 590 is the second part of a two part special called Dream 9 Toriko & One Piece & Dragon Ball Z Super Collaboration Special - a crossover with Toriko (2011) and Dragon Ball Z. The first part is Toriko (2011) episode 99. The first part aired on Toriko's timeslot at 9:00 and the second part aired on One Piece's timeslot at 9:30.\r\n(Source: AniDB)"
         val result = runBlocking { JikanKt.getAnimeMoreInfo(21) }
 
-        assertEquals(expected, result)
+        assertEquals(expected, result.moreInfo)
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -340,6 +363,7 @@ class TestCaseAnime {
         val result = runBlocking { JikanKt.getAnimeMoreInfo(2) }
 
         assertNull(result.moreInfo)
+        runBlocking { delay(1500) }
     }
 
     //endregion
@@ -393,6 +417,7 @@ class TestCaseAnime {
                 false
             ) ?: false
         )
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -400,6 +425,7 @@ class TestCaseAnime {
         val result = runBlocking { JikanKt.getAnimeReviews(2) }
 
         assertNull(result.reviews)
+        runBlocking { delay(1500) }
     }
 
     //endregion
@@ -420,6 +446,7 @@ class TestCaseAnime {
 
         assertEquals(expected.recommendations?.get(0)?.malId, result.recommendations?.get(0)?.malId)
         assertEquals(expected.recommendations?.get(0)?.title, result.recommendations?.get(0)?.title)
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -427,6 +454,7 @@ class TestCaseAnime {
         val result = runBlocking { JikanKt.getAnimeRecommendations(2) }
 
         assertNull(result.recommendations)
+        runBlocking { delay(1500) }
     }
 
     //endregion
@@ -442,6 +470,7 @@ class TestCaseAnime {
         val resultSecondPage = runBlocking { JikanKt.getAnimeUserUpdates(19815, 2) }
 
         assertEquals(75, resultSecondPage.updates?.count())
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -449,6 +478,7 @@ class TestCaseAnime {
         val result = runBlocking { JikanKt.getAnimeUserUpdates(2) }
 
         assertNull(result.updates)
+        runBlocking { delay(1500) }
     }
 
     //endregion

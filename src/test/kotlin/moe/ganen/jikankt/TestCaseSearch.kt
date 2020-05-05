@@ -1,5 +1,6 @@
 package moe.ganen.jikankt
 
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import moe.ganen.jikankt.connection.RestClient
 import moe.ganen.jikankt.exception.JikanException
@@ -26,6 +27,7 @@ class TestCaseSearch {
         assertEquals(expected.name, result?.name)
         assertEquals(expected.animeography?.count(), result?.animeography?.count())
         assertEquals(expected.animeography?.get(0)?.name, result?.animeography?.get(0)?.name)
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -34,6 +36,7 @@ class TestCaseSearch {
         val result = runBlocking { JikanKt.searchCharacter("naruto").lastPage }
 
         assertEquals(expected, result)
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -46,6 +49,7 @@ class TestCaseSearch {
         val result = runBlocking { jikan.searchCharacter("Bjir") }
 
         assertEquals(expected, result)
+        runBlocking { delay(1500) }
     }
 
     @Test(expected = JikanException::class)
@@ -54,6 +58,7 @@ class TestCaseSearch {
             restClient = RestClient(true)
         }
         runBlocking { jikan.searchCharacter("Bjir").results?.get(0) }
+        runBlocking { delay(1500) }
     }
 
     @Test
@@ -67,11 +72,13 @@ class TestCaseSearch {
 
         assertEquals(expected.malId, result?.malId)
         assertEquals(expected.name, result?.name)
+        runBlocking { delay(1500) }
     }
 
     @Test
     fun `test search random people`() {
         val result = runBlocking { JikanKt.searchPeople("Bjir").results }
         assertEquals(0, result?.size)
+        runBlocking { delay(1500) }
     }
 }
