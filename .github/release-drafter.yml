@@ -1,16 +1,21 @@
-name-template: $NEXT_PATCH_VERSION
-tag-template: $NEXT_PATCH_VERSION
+name-template: $NEXT_MINOR_VERSION
+tag-template: $NEXT_MINOR_VERSION
 change-template: '- $TITLE (#$NUMBER) @$AUTHOR'
 categories:
-  - title: Major Changes
-    label: "changes: major"
+  - title: Endpoints Update
+    labels:
+      - 'endpoints'
 
-  - title: Minor Changes
-    label: "changes: minor"
+  - title: Bug Fixing
+    labels:
+      - 'fix'
+      - 'bugfix'
+      - 'bug'
 
   - title: Patch Changes
-    label: "changes: patch"
+    labels:
+      - 'patch'
 
 template: |
-  ## Non-version Changes
+  ## Changes
   $CHANGES
