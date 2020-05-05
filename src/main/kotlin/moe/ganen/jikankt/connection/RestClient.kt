@@ -11,9 +11,8 @@ import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpMethod
 import moe.ganen.jikankt.JikanClient
 import moe.ganen.jikankt.exception.JikanException
-import moe.ganen.jikankt.exception.TooManyRequestException
 
-class RestClient : JikanClient() {
+class RestClient(private val isDebug: Boolean) : JikanClient() {
     private val client = httpClient
     private val gson = Gson()
 
@@ -49,24 +48,42 @@ class RestClient : JikanClient() {
             logger.debug("Response from Jikan: ${response.status.value}, body: $json")
 
             if (response.status.value !in 200..299) {
-                if (response.status.value in 500..599)
-                    throw Exception("An internal server error has occurred, code: ${response.status.value}")
+                if (response.status.value in 500..599) {
+                    val ex = Exception("An internal server error has occurred, code: ${response.status.value}")
+                    if (isDebug)
+                        throw ex
+                    else
+                        exceptionHandler(ex)
+                } else {
+                    val ex = JikanException(
+                        "Jikan API returns code ${response.status.value} and body ${json?.toString()}",
+                        response.status.value
+                    )
 
-                throw JikanException(
-                    "Jikan API returns code ${response.status.value} and body ${json?.toString()}",
-                    response.status.value
-                )
+                    if (isDebug)
+                        throw ex
+                    else
+                        exceptionHandler(ex)
+                }
             }
 
             return json ?: JsonObject()
-        } catch (ex: JikanException) {
-            throw ex
-        } catch (ex: TooManyRequestException) {
-            throw ex
         } catch (ex: Exception) {
-            logger.error(ex) { "An unexpected error has occurred!" }
-            throw ex
+            if (!isDebug) {
+                return exceptionHandler(ex, "An unexpected error has occurred!")
+            } else
+                throw ex
         }
+    }
+
+    private fun exceptionHandler(ex: java.lang.Exception, message: String? = null) : JsonObject {
+        if (message.isNullOrEmpty())
+            logger.error { "Something went wrong! Exception: ${ex.localizedMessage}" }
+        else
+            logger.error(ex) { message }
+
+        //Will return empty json object instead
+        return JsonObject()
     }
 
     companion object {
