@@ -11,7 +11,7 @@ repositories {
 }
 
 group = "com.github.GSculerlor"
-version = "1.1.2"
+version = "1.1.3"
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
@@ -34,6 +34,8 @@ dependencies {
     //kotlin-logging
     implementation("io.github.microutils:kotlin-logging:1.7.7")
     implementation("org.slf4j:slf4j-simple:1.7.26")
+
+    testImplementation("junit:junit:4.12")
 }
 
 tasks {
@@ -42,5 +44,9 @@ tasks {
     }
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
+    }
+
+    test {
+        useJUnit()
     }
 }
