@@ -458,7 +458,7 @@ object JikanKt {
 
     //endregion
 
-    //region Characters
+    //region People
 
     /**
      * Search results for the query.
@@ -480,8 +480,6 @@ object JikanKt {
     }
 
     //endregion
-
-    //region
 
     //endregion
 
