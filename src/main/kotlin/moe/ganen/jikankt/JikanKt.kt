@@ -15,10 +15,7 @@ import moe.ganen.jikankt.models.prod.Magazine
 import moe.ganen.jikankt.models.prod.Producer
 import moe.ganen.jikankt.models.schedule.Day
 import moe.ganen.jikankt.models.schedule.Schedule
-import moe.ganen.jikankt.models.search.AnimeSearchQuery
-import moe.ganen.jikankt.models.search.AnimeSearchResult
-import moe.ganen.jikankt.models.search.MangaSearchQuery
-import moe.ganen.jikankt.models.search.MangaSearchResult
+import moe.ganen.jikankt.models.search.*
 import moe.ganen.jikankt.models.season.Season
 import moe.ganen.jikankt.models.season.SeasonArchives
 import moe.ganen.jikankt.models.season.SeasonType
@@ -437,6 +434,31 @@ object JikanKt {
     }
 
     //endregion
+
+    //region Characters
+
+    /**
+     * Search results for the query.
+     * NOTE: MyAnimeList only processes queries with a minimum of 3 letters.
+     * @param query: String that will be the query. For UTF8 characters, percentage encoded and queries including back slashes
+     * @param page: Optional, default is 1. Index of page.
+     * @return list of anime that satisfy all the queries.
+     */
+    suspend fun searchCharacter(
+        query: String,
+        page: Int? = 1
+    ): CharacterSearchResult {
+        val formattedQuery = query.replace(" ", "%20")
+
+        return gson.deserialize(
+            restClient.request("search/character/$page?q=$formattedQuery"),
+            CharacterSearchResult::class.java
+        )
+    }
+
+    //endregion
+
+    //region
 
     //endregion
 
