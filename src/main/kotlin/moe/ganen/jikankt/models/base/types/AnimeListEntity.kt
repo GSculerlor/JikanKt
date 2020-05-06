@@ -128,11 +128,11 @@ data class AnimeListEntity(
      * Current airing status of anime.
      */
     @SerializedName("airing_status")
-    val airingStatus: String? = null,
+    val airingStatus: Int? = null,
 
     /**
      * Current user's watching status of anime.
      */
     @SerializedName("watching_status")
-    val watchingStatus: String? = null
+    val watchingStatus: Int? = null
 ) : MalEntity

@@ -12,13 +12,13 @@ data class User(
      * ID associated with MyAnimeList User.
      */
     @SerializedName("user_id")
-    val userId: Int,
+    val userId: Int? = null,
 
     /**
      * Username associated with MyAnimeList User.
      */
     @SerializedName("username")
-    val username: String,
+    val username: String? = null,
 
     /**
      * User's MyAnimeList link.
