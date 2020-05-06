@@ -93,7 +93,7 @@ class TestCaseTop {
         val expected = TopManga(
             top = listOf(
                 MangaTopEntity(malId = 2, rank = 1, title = "Berserk"),
-                MangaTopEntity(malId = 904, rank = 50, title = "Kozure Ookami")
+                MangaTopEntity(malId = 7, rank = 50, title = "Hajime no Ippo")
             )
         )
 
