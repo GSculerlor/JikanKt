@@ -27,7 +27,7 @@ class TestCaseProducer {
 
         assertEquals(expected.metadata, result.metadata)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -41,13 +41,13 @@ class TestCaseProducer {
         assertEquals(expected.anime?.get(0)?.title, result.anime?.get(0)?.title)
         assertEquals(expected.anime?.get(1)?.title, result.anime?.get(1)?.title)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test(expected = JikanException::class)
     fun `test get bad ID producer return exception`() {
         runBlocking { JikanKt.apply { restClient = RestClient(true) }.getProducer(712) }
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -56,6 +56,6 @@ class TestCaseProducer {
 
         assert(result.anime.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 }

@@ -37,7 +37,7 @@ class TestCaseSchedule {
         assertEquals(expected.saturday?.get(0)?.title, result.saturday?.get(0)?.title)
         assertEquals(expected.sunday?.get(0)?.title, result.sunday?.get(0)?.title)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -56,6 +56,6 @@ class TestCaseSchedule {
         assert(expected.saturday.isNullOrEmpty())
         assert(expected.sunday.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 }

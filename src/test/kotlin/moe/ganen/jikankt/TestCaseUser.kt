@@ -29,7 +29,7 @@ class TestCaseUser {
         assertEquals(expected.username, result.username)
         assertEquals(expected.joined, result.joined)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -37,7 +37,7 @@ class TestCaseUser {
         val result = runBlocking { JikanKt.getUserHistory("GSculerlor", HistoryType.Anime) }
         assert(!result.histories.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -45,7 +45,7 @@ class TestCaseUser {
         val result = runBlocking { JikanKt.getUserHistory("GSculerlor", HistoryType.All) }
         assert(!result.histories.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -53,7 +53,7 @@ class TestCaseUser {
         val result = runBlocking { JikanKt.getUserHistory("GSculerlor", HistoryType.Manga) }
         assert(result.histories.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -61,7 +61,7 @@ class TestCaseUser {
         val result = runBlocking { JikanKt.getUserFriends("GSculerlor") }
         assert(!result.friends.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -69,13 +69,13 @@ class TestCaseUser {
         val result = runBlocking { JikanKt.getUserHistory("Mizore", HistoryType.Manga) }
         assert(!result.histories.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test(expected = JikanException::class)
     fun `test get bjir123 profile throw exception`() {
         runBlocking { JikanKt.apply { restClient = RestClient(true) }.getUser("bjir123") }
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -83,6 +83,6 @@ class TestCaseUser {
         val result = runBlocking { JikanKt.apply { restClient = RestClient(false) }.getUser("bjir123") }
 
         assert(result.username.isNullOrEmpty())
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 }

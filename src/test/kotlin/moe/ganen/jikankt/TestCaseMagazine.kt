@@ -27,7 +27,7 @@ class TestCaseMagazine {
 
         assertEquals(expected.metadata, result.metadata)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -44,13 +44,13 @@ class TestCaseMagazine {
         assertEquals(expected.manga?.get(0)?.title, result.manga?.get(0)?.title)
         assertEquals(expected.manga?.get(1)?.title, result.manga?.get(1)?.title)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test(expected = JikanException::class)
     fun `test get bad ID magazine return exception`() {
         runBlocking { JikanKt.apply { restClient = RestClient(true) }.getMagazine(676) }
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -59,6 +59,6 @@ class TestCaseMagazine {
 
         assert(result.manga.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 }

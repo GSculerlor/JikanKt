@@ -21,7 +21,7 @@ class TestCaseUserLists {
         val result = runBlocking { JikanKt.getUserAnimeList("GSculerlor") }
         assert(result.anime?.count() ?: 0 >= 230)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -29,7 +29,7 @@ class TestCaseUserLists {
         val result = runBlocking { JikanKt.getUserMangaList("GSculerlor") }
         assert(result.manga.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -55,7 +55,7 @@ class TestCaseUserLists {
         assertEquals(expected.anime?.get(0)?.title, result.anime?.get(0)?.title)
         assertEquals(expected.anime?.get(0)?.airingStatus, result.anime?.get(0)?.airingStatus)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -79,7 +79,7 @@ class TestCaseUserLists {
 
         assertEquals(expected.manga?.get(0)?.title, result.manga?.get(0)?.title)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -90,6 +90,6 @@ class TestCaseUserLists {
 
         assertEquals(expected.anime?.get(0)?.title, result.anime?.get(0)?.title)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 }

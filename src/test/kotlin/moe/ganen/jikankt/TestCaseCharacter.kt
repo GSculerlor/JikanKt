@@ -29,7 +29,7 @@ class TestCaseCharacter {
         assert(result.about?.contains(result.about.toString(), false) ?: false)
         assert(result.nicknames.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -38,7 +38,7 @@ class TestCaseCharacter {
 
         assert(result.name.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test(expected = JikanException::class)
@@ -73,7 +73,7 @@ class TestCaseCharacter {
             assertEquals(expected.pictures?.get(i), result.pictures?.get(i))
         }
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -82,7 +82,7 @@ class TestCaseCharacter {
 
         assert(result.pictures.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test

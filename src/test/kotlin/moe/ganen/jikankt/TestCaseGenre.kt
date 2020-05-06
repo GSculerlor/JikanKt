@@ -30,7 +30,7 @@ class TestCaseGenre {
         assertEquals(expected.anime?.get(1)?.title, result.anime?.get(1)?.title)
         assert(result.manga.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -56,7 +56,7 @@ class TestCaseGenre {
         assertEquals(expected.anime?.get(1)?.title, result.anime?.get(1)?.title)
         assert(result.manga.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -77,7 +77,7 @@ class TestCaseGenre {
         assertEquals(expected.manga?.get(1)?.title, result.manga?.get(1)?.title)
         assert(result.anime.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -103,6 +103,6 @@ class TestCaseGenre {
         assertEquals(expected.manga?.get(1)?.title, result.manga?.get(1)?.title)
         assert(result.anime.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 }

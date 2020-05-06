@@ -30,7 +30,7 @@ class TestCaseTop {
         assert(result.top?.get(49)?.rank == 50)
         assertEquals(expected.top?.get(1)?.title, result.top?.get(49)?.title)
 
-        runBlocking { delay(5000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -49,7 +49,7 @@ class TestCaseTop {
         assert(result.top?.get(49)?.rank == 100)
         assertEquals(expected.top?.get(1)?.title, result.top?.get(49)?.title)
 
-        runBlocking { delay(5000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -65,7 +65,7 @@ class TestCaseTop {
         assert(result.top?.get(0)?.rank == 1)
         assertEquals(expected.top?.get(0)?.title, result.top?.get(0)?.title)
 
-        runBlocking { delay(5000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -81,7 +81,7 @@ class TestCaseTop {
         assert(result.top?.get(0)?.rank == 1)
         assertEquals(expected.top?.get(0)?.title, result.top?.get(0)?.title)
 
-        runBlocking { delay(5000) }
+        runBlocking { delay(3000) }
     }
 
     //endregion
@@ -101,7 +101,7 @@ class TestCaseTop {
         assert(result.top?.get(0)?.rank == 1)
         assertEquals(expected.top?.get(0)?.title, result.top?.get(0)?.title)
 
-        runBlocking { delay(5000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -117,7 +117,7 @@ class TestCaseTop {
         assert(result.top?.get(0)?.rank == 1)
         assertEquals(expected.top?.get(0)?.title, result.top?.get(0)?.title)
 
-        runBlocking { delay(5000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -133,7 +133,7 @@ class TestCaseTop {
         assert(result.top?.get(0)?.rank == 1)
         assertEquals(expected.top?.get(0)?.title, result.top?.get(0)?.title)
 
-        runBlocking { delay(5000) }
+        runBlocking { delay(3000) }
     }
 
     //endregion
@@ -156,7 +156,7 @@ class TestCaseTop {
         assert(result.top?.get(49)?.rank == 50)
         assertEquals(expected.top?.get(1)?.name, result.top?.get(49)?.name)
 
-        runBlocking { delay(5000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -175,7 +175,7 @@ class TestCaseTop {
         assert(result.top?.get(49)?.rank == 100)
         assertEquals(expected.top?.get(1)?.name, result.top?.get(49)?.name)
 
-        runBlocking { delay(5000) }
+        runBlocking { delay(3000) }
     }
     //endregion
 
@@ -197,7 +197,7 @@ class TestCaseTop {
         assert(result.top?.get(49)?.rank == 50)
         assertEquals(expected.top?.get(1)?.name, result.top?.get(49)?.name)
 
-        runBlocking { delay(5000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -216,7 +216,7 @@ class TestCaseTop {
         assert(result.top?.get(49)?.rank == 100)
         assertEquals(expected.top?.get(1)?.name, result.top?.get(49)?.name)
 
-        runBlocking { delay(5000) }
+        runBlocking { delay(3000) }
     }
     //endregion
 }

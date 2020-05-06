@@ -26,7 +26,7 @@ class TestCaseClub {
         assertEquals(expected.malId, result.malId)
         assertEquals(expected.animeRelations?.get(0)?.name, result.animeRelations?.get(0)?.name)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -45,13 +45,13 @@ class TestCaseClub {
         assert(result.animeRelations.isNullOrEmpty())
         assert(result.mangaRelations.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test(expected = JikanException::class)
     fun `test get bad ID club return exception`() {
         runBlocking { JikanKt.apply { restClient = RestClient(true) }.getClub(7787) }
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -61,7 +61,7 @@ class TestCaseClub {
         assert(result.mangaRelations.isNullOrEmpty())
         assert(result.animeRelations.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -75,7 +75,7 @@ class TestCaseClub {
         assertEquals(expected.members?.get(0)?.username, result.members?.get(0)?.username)
         assertEquals(expected.members?.get(1)?.username, result.members?.get(1)?.username)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -84,6 +84,6 @@ class TestCaseClub {
 
         assert(result.members.isNullOrEmpty())
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 }

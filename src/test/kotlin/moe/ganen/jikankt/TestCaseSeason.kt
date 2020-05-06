@@ -17,7 +17,7 @@ class TestCaseSeason {
         assert(result.archive?.first()?.year == 2020)
         assert(result.archive?.first()?.seasons?.count() == 4)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -40,7 +40,7 @@ class TestCaseSeason {
         assertEquals(expected.anime?.get(0)?.malId, result.anime?.get(0)?.malId)
         assertEquals(expected.anime?.get(0)?.title, result.anime?.get(0)?.title)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -63,7 +63,7 @@ class TestCaseSeason {
         assertEquals(expected.anime?.get(0)?.malId, result.anime?.get(1)?.malId)
         assertEquals(expected.anime?.get(0)?.title, result.anime?.get(1)?.title)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -86,7 +86,7 @@ class TestCaseSeason {
         assertEquals(expected.anime?.get(0)?.malId, result.anime?.get(0)?.malId)
         assertEquals(expected.anime?.get(0)?.title, result.anime?.get(0)?.title)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -109,6 +109,6 @@ class TestCaseSeason {
         assertEquals(expected.anime?.get(0)?.malId, result.anime?.get(0)?.malId)
         assertEquals(expected.anime?.get(0)?.title, result.anime?.get(0)?.title)
 
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 }

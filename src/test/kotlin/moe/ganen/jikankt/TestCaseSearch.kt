@@ -33,7 +33,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
         assertEquals(20, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -53,7 +53,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
         assertEquals(1, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -80,7 +80,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
         assertEquals(expected.results?.get(0)?.rated, result.results?.get(0)?.rated)
         assertEquals(1, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -115,7 +115,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.startDate, result.results?.get(0)?.startDate)
         assertEquals(expected.results?.get(0)?.endDate, result.results?.get(0)?.endDate)
         assertEquals(1, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -150,7 +150,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.startDate, result.results?.get(0)?.startDate)
         assertEquals(expected.results?.get(0)?.endDate, result.results?.get(0)?.endDate)
         assertEquals(1, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -179,7 +179,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
         assertEquals(20, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -207,7 +207,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
         assertEquals(2, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -236,7 +236,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
         assertEquals(3, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     //endregion
@@ -260,7 +260,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
         assertEquals(20, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -280,7 +280,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.score, result.results?.get(0)?.score)
         assertEquals(1, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -305,7 +305,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
         assertEquals(1, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -342,7 +342,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.startDate, result.results?.get(0)?.startDate)
         assertEquals(expected.results?.get(0)?.endDate, result.results?.get(0)?.endDate)
         assertEquals(2, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -369,7 +369,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
         assertEquals(20, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -396,7 +396,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
         assertEquals(1, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -424,7 +424,7 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
         assertEquals(4, result.lastPage)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     //endregion
@@ -445,7 +445,7 @@ class TestCaseSearch {
         assertEquals(expected.name, result?.name)
         assertEquals(expected.animeography?.count(), result?.animeography?.count())
         assertEquals(expected.animeography?.get(0)?.name, result?.animeography?.get(0)?.name)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -454,7 +454,7 @@ class TestCaseSearch {
         val result = runBlocking { JikanKt.searchCharacter("naruto").lastPage }
 
         assertEquals(expected, result)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -467,7 +467,7 @@ class TestCaseSearch {
         val result = runBlocking { jikan.searchCharacter("Bjir") }
 
         assertEquals(expected, result)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test(expected = JikanException::class)
@@ -476,7 +476,7 @@ class TestCaseSearch {
             restClient = RestClient(true)
         }
         runBlocking { jikan.searchCharacter("Bjir").results?.get(0) }
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     //endregion
@@ -494,14 +494,14 @@ class TestCaseSearch {
 
         assertEquals(expected.malId, result?.malId)
         assertEquals(expected.name, result?.name)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     @Test
     fun `test search random people`() {
         val result = runBlocking { JikanKt.searchPeople("Bjir").results }
         assertEquals(0, result?.size)
-        runBlocking { delay(2000) }
+        runBlocking { delay(3000) }
     }
 
     //endregion
