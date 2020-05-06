@@ -29,7 +29,7 @@ class TestCasePerson {
         assert(result.about?.contains(result.about.toString(), false) ?: false)
         assert(result.alternativeNames.isNullOrEmpty())
 
-        runBlocking { delay(1500) }
+        runBlocking { delay(2000) }
     }
 
     @Test
@@ -38,14 +38,14 @@ class TestCasePerson {
 
         assert(result.name.isNullOrEmpty())
 
-        runBlocking { delay(1500) }
+        runBlocking { delay(2000) }
     }
 
     @Test(expected = JikanException::class)
     fun `test get person with bad ID then throw exception`() {
         runBlocking {
             JikanKt.apply { restClient = RestClient(true) }.getPerson(13308)
-            delay(1500)
+            delay(2000)
         }
     }
 
@@ -74,7 +74,7 @@ class TestCasePerson {
             assertEquals(expected.pictures?.get(i), result.pictures?.get(i))
         }
 
-        runBlocking { delay(1500) }
+        runBlocking { delay(2000) }
     }
 
     @Test
@@ -83,14 +83,14 @@ class TestCasePerson {
 
         assert(result.pictures.isNullOrEmpty())
 
-        runBlocking { delay(1500) }
+        runBlocking { delay(2000) }
     }
 
     @Test(expected = JikanException::class)
     fun `test get person picture with bad ID then throw exception`() {
         runBlocking {
             JikanKt.apply { restClient = RestClient(true) }.getPersonPictures(13308)
-            delay(1500)
+            delay(2000)
         }
     }
 }
