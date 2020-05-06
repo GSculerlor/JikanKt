@@ -225,8 +225,8 @@ object JikanKt {
 
     /**
      * Function to get all top anime on MyAnimeList.
-     * @param page: Optional, default is 1. Index of page, each page contain 50 items.
      * @param subtype: Optional, subtype type (upcoming, airing, etc).
+     * @param page: Optional, default is 1. Index of page, each page contain 50 items.
      * @return List of top anime on MyAnimeList.
      */
     suspend fun getTopAnime(page: Int? = 1, subtype: TopSubtype? = TopSubtype.NONE): TopAnime =
@@ -250,24 +250,22 @@ object JikanKt {
     /**
      * Function to get all top characters on MyAnimeList.
      * @param page: Optional, default is 1. Index of page, each page contain 50 items.
-     * @param subtype: Optional, subtype type (bypopularity, favorite).
      * @return List of top characters on MyAnimeList.
      */
-    suspend fun getTopCharacters(page: Int? = 1, subtype: TopSubtype? = TopSubtype.NONE): TopCharacters =
+    suspend fun getTopCharacters(page: Int? = 1): TopCharacters =
         gson.deserialize(
-            restClient.request("top/characters/$page/${if (subtype == TopSubtype.NONE) "" else subtype?.name?.toLowerCase()}"),
+            restClient.request("top/characters/$page"),
             TopCharacters::class.java
         )
 
     /**
      * Function to get all top people on MyAnimeList.
      * @param page: Optional, default is 1. Index of page, each page contain 50 items.
-     * @param subtype: Optional, subtype type (bypopularity, favorite).
      * @return List of top people on MyAnimeList.
      */
-    suspend fun getTopPeople(page: Int? = 1, subtype: TopSubtype? = TopSubtype.NONE): TopPeople =
+    suspend fun getTopPeople(page: Int? = 1): TopPeople =
         gson.deserialize(
-            restClient.request("top/people/$page/${if (subtype == TopSubtype.NONE) "" else subtype?.name?.toLowerCase()}"),
+            restClient.request("top/people/$page"),
             TopPeople::class.java
         )
 
