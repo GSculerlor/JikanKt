@@ -9,13 +9,13 @@ data class Season(
      * Name of the season.
      */
     @SerializedName("season_name")
-    val seasonName: String,
+    val seasonName: String? = null,
 
     /**
      * Year of the season.
      */
     @SerializedName("season_year")
-    val seasonYear: Int,
+    val seasonYear: Int? = null,
 
     /**
      * List of anime in this season.

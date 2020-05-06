@@ -176,12 +176,16 @@ object JikanKt {
 
     /**
      * Function to get anime list by it's season.
+     * NOTE: If year and/or season is not specified, it'll return current season instead.
      * @param year: Year of the season.
      * @param season: season type (winter, spring, etc).
      * @return List of anime that airing on that season.
      */
-    suspend fun getSeason(year: Int, season: SeasonType): Season =
-        gson.deserialize(restClient.request("season/$year/${season.name.toLowerCase()}"), Season::class.java)
+    suspend fun getSeason(year: Int? = null, season: SeasonType? = null): Season {
+        val query = if (year != null && season != null && season != SeasonType.All) "$year/${season.name.toLowerCase()}" else ""
+
+        return gson.deserialize(restClient.request("season/$query"), Season::class.java)
+    }
 
     /**
      * Function to get archived season on MyAnimeList.
