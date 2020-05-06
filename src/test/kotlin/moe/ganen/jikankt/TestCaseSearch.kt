@@ -37,6 +37,26 @@ class TestCaseSearch {
     }
 
     @Test
+    fun `test search anime without title`() {
+        val expected = AnimeSearchResult(
+            results = listOf(
+                AnimeSearchSubEntity(
+                    malId = 7669,
+                    title = "\"Bungaku Shoujo\" Kyou no Oyatsu: Hatsukoi",
+                    type = AnimeType.OVA
+                )
+            )
+        )
+        val result = runBlocking { JikanKt.searchAnime(additionalQuery = AnimeSearchQuery(AnimeType.OVA)) }
+
+        assertEquals(expected.results?.get(0)?.malId, result.results?.get(0)?.malId)
+        assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
+        assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
+        assertEquals(1, result.lastPage)
+        runBlocking { delay(2000) }
+    }
+
+    @Test
     fun `test search anime with query 1`() {
         val expected = AnimeSearchResult(
             results = listOf(
@@ -240,6 +260,26 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
         assertEquals(20, result.lastPage)
+        runBlocking { delay(2000) }
+    }
+
+    @Test
+    fun `test search manga without title`() {
+        val expected = MangaSearchResult(
+            results = listOf(
+                MangaSearchSubEntity(
+                    malId = 10000,
+                    title = "\"Bungaku Shoujo\" Series",
+                    score = 8.13
+                )
+            )
+        )
+        val result = runBlocking { JikanKt.searchManga(additionalQuery = MangaSearchQuery(score = 8)) }
+
+        assertEquals(expected.results?.get(0)?.malId, result.results?.get(0)?.malId)
+        assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
+        assertEquals(expected.results?.get(0)?.score, result.results?.get(0)?.score)
+        assertEquals(1, result.lastPage)
         runBlocking { delay(2000) }
     }
 
