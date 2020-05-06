@@ -1,5 +1,6 @@
 package moe.ganen.jikankt
 
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import moe.ganen.jikankt.connection.RestClient
 import moe.ganen.jikankt.exception.JikanException
@@ -25,6 +26,8 @@ class TestCaseMagazine {
         val result = runBlocking { JikanKt.getMagazine(1) }
 
         assertEquals(expected.metadata, result.metadata)
+
+        runBlocking { delay(2000) }
     }
 
     @Test
@@ -40,11 +43,14 @@ class TestCaseMagazine {
 
         assertEquals(expected.manga?.get(0)?.title, result.manga?.get(0)?.title)
         assertEquals(expected.manga?.get(1)?.title, result.manga?.get(1)?.title)
+
+        runBlocking { delay(2000) }
     }
 
     @Test(expected = JikanException::class)
     fun `test get bad ID magazine return exception`() {
         runBlocking { JikanKt.apply { restClient = RestClient(true) }.getMagazine(676) }
+        runBlocking { delay(2000) }
     }
 
     @Test
@@ -52,5 +58,7 @@ class TestCaseMagazine {
         val result = runBlocking { JikanKt.apply { restClient = RestClient(false) }.getMagazine(676) }
 
         assert(result.manga.isNullOrEmpty())
+
+        runBlocking { delay(2000) }
     }
 }
