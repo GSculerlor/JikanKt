@@ -10,11 +10,11 @@ enum class AnimeType {
     Music
 }
 
-enum class MangaType {
+enum class MangaType(val queryString: String? = null) {
     All,
     Manga,
     Novel,
-    Oneshot,
+    `One-shot`("oneshot"),
     Doujin,
     Manhwa,
     Manhua
