@@ -92,8 +92,7 @@ class TestCaseTop {
     fun `test get top manga`() {
         val expected = TopManga(
             top = listOf(
-                MangaTopEntity(malId = 2, rank = 1, title = "Berserk"),
-                MangaTopEntity(malId = 904, rank = 50, title = "Kozure Ookami")
+                MangaTopEntity(malId = 2, rank = 1, title = "Berserk")
             )
         )
 
@@ -101,27 +100,6 @@ class TestCaseTop {
 
         assert(result.top?.get(0)?.rank == 1)
         assertEquals(expected.top?.get(0)?.title, result.top?.get(0)?.title)
-        assert(result.top?.get(49)?.rank == 50)
-        assertEquals(expected.top?.get(1)?.title, result.top?.get(49)?.title)
-
-        runBlocking { delay(5000) }
-    }
-
-    @Test
-    fun `test get top manga second page`() {
-        val expected = TopManga(
-            top = listOf(
-                MangaTopEntity(malId = 24875, rank = 51, title = "Shinyaku Toaru Majutsu no Index"),
-                MangaTopEntity(malId = 8157, rank = 100, title = "Kamisama Hajimemashita")
-            )
-        )
-
-        val result = runBlocking { JikanKt.getTopManga(2) }
-
-        assert(result.top?.get(0)?.rank == 51)
-        assertEquals(expected.top?.get(0)?.title, result.top?.get(0)?.title)
-        assert(result.top?.get(49)?.rank == 100)
-        assertEquals(expected.top?.get(1)?.title, result.top?.get(49)?.title)
 
         runBlocking { delay(5000) }
     }
