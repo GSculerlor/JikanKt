@@ -158,35 +158,6 @@ class TestCaseSearch {
         val expected = AnimeSearchResult(
             results = listOf(
                 AnimeSearchSubEntity(
-                    malId = 41759,
-                    title = "Sora Tobu Kujira",
-                    type = AnimeType.Music
-                )
-            )
-        )
-        val result = runBlocking {
-            JikanKt.searchAnime(
-                "Sora no Aosa",
-                AnimeSearchQuery(
-                    orderBy = AnimeOrderBy.Members,
-                    sort = Sort.Ascending,
-                    limit = 1
-                )
-            )
-        }
-
-        assertEquals(expected.results?.get(0)?.malId, result.results?.get(0)?.malId)
-        assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
-        assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
-        assertEquals(20, result.lastPage)
-        runBlocking { delay(3000) }
-    }
-
-    @Test
-    fun `test search anime with query 5`() {
-        val expected = AnimeSearchResult(
-            results = listOf(
-                AnimeSearchSubEntity(
                     malId = 39569,
                     title = "Sora no Aosa wo Shiru Hito yo",
                     type = AnimeType.Movie

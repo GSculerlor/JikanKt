@@ -292,7 +292,7 @@ class TestCaseAnime {
         val result = runBlocking { JikanKt.getAnimeStats(39569) }
 
         assert(result.watching in 900..950)
-        assert(result.completed in 1600..1650)
+        assert(result.completed in 1600..1850)
         assert(result.onHold in 350..450)
         assert(result.dropped in 70..80)
         runBlocking { delay(3000) }

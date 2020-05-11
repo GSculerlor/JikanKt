@@ -161,19 +161,10 @@ class TestCaseTop {
 
     @Test
     fun `test get top characters second page`() {
-        val expected = TopCharacters(
-            top = listOf(
-                CharacterTopEntity(malId = 913, rank = 51, name = "Vegeta"),
-                CharacterTopEntity(malId = 118739, rank = 100, name = "Sakurajima, Mai")
-            )
-        )
-
         val result = runBlocking { JikanKt.getTopCharacters(2) }
 
         assert(result.top?.get(0)?.rank == 51)
-        assertEquals(expected.top?.get(0)?.name, result.top?.get(0)?.name)
         assert(result.top?.get(49)?.rank == 100)
-        assertEquals(expected.top?.get(1)?.name, result.top?.get(49)?.name)
 
         runBlocking { delay(3000) }
     }
