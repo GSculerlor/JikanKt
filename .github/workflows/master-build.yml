@@ -27,7 +27,7 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew build --stacktrace --debug
 
   release-notes:
     runs-on: ubuntu-latest

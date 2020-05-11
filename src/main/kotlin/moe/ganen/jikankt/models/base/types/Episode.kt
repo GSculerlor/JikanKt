@@ -11,7 +11,7 @@ data class Episode(
      * ID associated with the anime.
      */
     @SerializedName("episode_id")
-    val malId: Int? = null,
+    val episodeId: Int? = null,
 
     /**
      * Title of the episode.

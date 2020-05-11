@@ -44,13 +44,13 @@ data class AnimeSearchQuery(
             stringBuilder.append("&end_date=${queryDateFormat.format(endDate)}")
 
         if (excludedGenre)
-            stringBuilder.append("&genre_exclude=1")
+            stringBuilder.append("&genre_exclude=0")
 
         if (limit != null)
             stringBuilder.append("&limit=${limit}")
 
         if (orderBy != AnimeOrderBy.None)
-            stringBuilder.append("&order_by=${if (orderBy.queryString.isNullOrEmpty()) orderBy.name else orderBy.queryString}")
+            stringBuilder.append("&order_by=${if (orderBy.queryString.isNullOrEmpty()) orderBy.name.toLowerCase() else orderBy.queryString}")
 
         if (sort == Sort.Ascending)
             stringBuilder.append("&sort=asc")
