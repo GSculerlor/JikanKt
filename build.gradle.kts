@@ -11,7 +11,7 @@ repositories {
 }
 
 group = "com.github.GSculerlor"
-version = "1.1.3"
+version = "1.2.0"
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
