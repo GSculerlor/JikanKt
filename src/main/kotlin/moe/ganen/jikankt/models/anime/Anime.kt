@@ -179,21 +179,39 @@ data class Anime(
     @SerializedName("related")
     val related: RelatedAnime? = null,
 
+    /**
+     * List of producers of this anime.
+     */
     @SerializedName("producers")
     val producers: List<MalSubEntity?>? = null,
 
+    /**
+     * List of licensors of this anime.
+     */
     @SerializedName("licensors")
     val licensors: List<MalSubEntity?>? = null,
 
+    /**
+     * List of studios of this anime.
+     */
     @SerializedName("studios")
     val studios: List<MalSubEntity?>? = null,
 
+    /**
+     * List of genre of this anime.
+     */
     @SerializedName("genres")
     val genres: List<MalSubEntity?>? = null,
 
+    /**
+     * List of opening theme (OP) of this anime.
+     */
     @SerializedName("opening_themes")
     val openingThemes: List<String?>? = null,
 
+    /**
+     * List of ending theme (ED) of this anime.
+     */
     @SerializedName("ending_themes")
     val endingThemes: List<String?>? = null
 
