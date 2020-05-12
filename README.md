@@ -12,7 +12,7 @@ repositories {
 }
     
 dependencies {
-    implementation 'com.github.GSculerlor:JikanKt:1.1.3'
+    implementation 'com.github.GSculerlor:JikanKt:1.2.0'
 }
 ```
 with Maven
@@ -27,7 +27,7 @@ with Maven
 <dependency>
     <groupId>com.github.GSculerlor</groupId>
     <artifactId>JikanKt</artifactId>
-    <version>1.1.3</version>
+    <version>1.2.0</version>
 </dependency>
 ```
 

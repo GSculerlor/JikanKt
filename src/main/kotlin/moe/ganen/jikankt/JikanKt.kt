@@ -9,6 +9,7 @@ import moe.ganen.jikankt.models.club.Club
 import moe.ganen.jikankt.models.club.ClubMembers
 import moe.ganen.jikankt.models.genre.Genre
 import moe.ganen.jikankt.models.genre.RequestType
+import moe.ganen.jikankt.models.manga.*
 import moe.ganen.jikankt.models.person.Person
 import moe.ganen.jikankt.models.person.PersonPictures
 import moe.ganen.jikankt.models.prod.Magazine
@@ -130,6 +131,91 @@ object JikanKt {
      */
     suspend fun getAnimeUserUpdates(id: Int, page: Int? = 1): AnimeUserUpdates =
         gson.deserialize(restClient.request("anime/$id/userupdates/$page"), AnimeUserUpdates::class.java)
+
+    //endregion
+
+    //region Manga
+
+    /**
+     * Function to get manga by it's MyAnimeList id
+     * @param id: MyAnimeList id of the manga.
+     * @return Manga with given MyAnimeList id.
+     */
+    suspend fun getManga(id: Int): Manga = gson.deserialize(restClient.request("manga/$id"), Manga::class.java)
+
+    /**
+     * Function to get manga's characters by it's MyAnimeList id
+     * @param id: MyAnimeList id of the manga.
+     * @return List of characters and staff of the manga with given MyAnimeList id.
+     */
+    suspend fun getMangaCharacters(id: Int): MangaCharacters =
+        gson.deserialize(restClient.request("manga/$id/characters"), MangaCharacters::class.java)
+
+    /**
+     * Function to get manga's news by it's MyAnimeList id
+     * @param id: MyAnimeList id of the manga.
+     * @return List of articles related to the manga with given MyAnimeList id.
+     */
+    suspend fun getMangaNews(id: Int): MangaNews =
+        gson.deserialize(restClient.request("manga/$id/news"), MangaNews::class.java)
+
+    /**
+     * Function to get manga's pictures by it's MyAnimeList id
+     * @param id: MyAnimeList id of the manga.
+     * @return List of pictures to the manga with given MyAnimeList id.
+     */
+    suspend fun getMangaPictures(id: Int): MangaPictures =
+        gson.deserialize(restClient.request("manga/$id/pictures"), MangaPictures::class.java)
+
+    /**
+     * Function to get manga's stats by it's MyAnimeList id
+     * @param id: MyAnimeList id of the manga.
+     * @return Statistics to the manga with given MyAnimeList id.
+     */
+    suspend fun getMangaStats(id: Int): MangaStats =
+        gson.deserialize(restClient.request("manga/$id/stats"), MangaStats::class.java)
+
+    /**
+     * Function to get manga's forum by it's MyAnimeList id
+     * @param id: MyAnimeList id of the manga.
+     * @return List of topics to the manga with given MyAnimeList id.
+     */
+    suspend fun getMangaForum(id: Int): MangaForum =
+        gson.deserialize(restClient.request("manga/$id/forum"), MangaForum::class.java)
+
+    /**
+     * Function to get manga's more info by it's MyAnimeList id
+     * @param id: MyAnimeList id of the manga.
+     * @return Manga's more info in string, if any.
+     */
+    suspend fun getMangaMoreInfo(id: Int): MangaMoreInfo =
+        gson.deserialize(restClient.request("manga/$id/moreinfo"), MangaMoreInfo::class.java)
+
+    /**
+     * Function to get manga's reviews by it's MyAnimeList id
+     * @param id: MyAnimeList id of the manga.
+     * @param page: Optional, default is 1. Index of page, each page contain 20 items.
+     * @return List of reviews of the manga with given MyAnimeList id.
+     */
+    suspend fun getMangaReviews(id: Int, page: Int? = 1): MangaReviews =
+        gson.deserialize(restClient.request("manga/$id/reviews/$page"), MangaReviews::class.java)
+
+    /**
+     * Function to get manga's recommendations by it's MyAnimeList id
+     * @param id: MyAnimeList id of the manga.
+     * @return List of recommendations to the manga with given MyAnimeList id.
+     */
+    suspend fun getMangaRecommendations(id: Int): MangaRecommendations =
+        gson.deserialize(restClient.request("manga/$id/recommendations"), MangaRecommendations::class.java)
+
+    /**
+     * Function to get manga's user updates by it's MyAnimeList id
+     * @param id: MyAnimeList id of the manga.
+     * @param page: Optional, default is 1. Index of page, each page contain 75 items.
+     * @return List of user updates of the manga with given MyAnimeList id.
+     */
+    suspend fun getMangaUserUpdates(id: Int, page: Int? = 1): MangaUserUpdates =
+        gson.deserialize(restClient.request("manga/$id/userupdates/$page"), MangaUserUpdates::class.java)
 
     //endregion
 

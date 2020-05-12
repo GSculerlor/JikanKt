@@ -91,8 +91,7 @@ class TestCaseGenre {
                     "https://myanimelist.net/manga/genre/6/Demons?page=5"
                 ),
                 manga = listOf(
-                    MangaSubEntity(malId = 58945, title = "Tawamure Yuuoni"),
-                    MangaSubEntity(malId = 21122, title = "Yorozu Tatarareya")
+                    MangaSubEntity(malId = 58945, title = "Tawamure Yuuoni")
                 )
             )
 
@@ -100,7 +99,6 @@ class TestCaseGenre {
 
         assertEquals(expected.metadata, result.metadata)
         assertEquals(expected.manga?.get(0)?.title, result.manga?.get(0)?.title)
-        assertEquals(expected.manga?.get(1)?.title, result.manga?.get(1)?.title)
         assert(result.anime.isNullOrEmpty())
 
         runBlocking { delay(3000) }
