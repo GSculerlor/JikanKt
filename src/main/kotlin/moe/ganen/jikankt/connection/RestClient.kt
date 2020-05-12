@@ -3,12 +3,11 @@ package moe.ganen.jikankt.connection
 import com.google.gson.Gson
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
-import io.ktor.client.call.call
+import io.ktor.client.request.get
 import io.ktor.client.request.header
-import io.ktor.client.request.url
-import io.ktor.client.response.readText
+import io.ktor.client.statement.HttpResponse
+import io.ktor.client.statement.readText
 import io.ktor.http.HttpHeaders
-import io.ktor.http.HttpMethod
 import moe.ganen.jikankt.JikanClient
 import moe.ganen.jikankt.exception.JikanException
 
@@ -27,17 +26,13 @@ class RestClient(private val isDebug: Boolean) : JikanClient() {
 
             logger.info { "Requesting to Jikan: $url" }
 
-            val response = client.call {
-                method = HttpMethod.Get
 
-                url(url)
+            val response = client.get<HttpResponse>(url) {
                 header(HttpHeaders.Accept, "application/json")
-            }.response
+            }
 
             val contentType = response.headers["Content-Type"]
             val body = response.readText()
-
-            response.close()
 
             val json = if (contentType?.equals("application/json", true) == true) {
                 gson.fromJson(body, JsonElement::class.java)

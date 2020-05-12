@@ -21,12 +21,12 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.3.5")
 
     //Ktor
-    implementation("io.ktor:ktor-client-core:1.2.1")
-    implementation("io.ktor:ktor-client-core-jvm:1.2.1")
-    implementation("io.ktor:ktor-client-json:1.2.1")
-    implementation("io.ktor:ktor-client-json-jvm:1.2.1")
-    implementation("io.ktor:ktor-client-okhttp:1.2.1")
-    implementation("io.ktor:ktor-client-gson:1.2.1")
+    implementation("io.ktor:ktor-client-core:1.3.2")
+    implementation("io.ktor:ktor-client-core-jvm:1.3.2")
+    implementation("io.ktor:ktor-client-json:1.3.2")
+    implementation("io.ktor:ktor-client-json-jvm:1.3.2")
+    implementation("io.ktor:ktor-client-okhttp:1.3.2")
+    implementation("io.ktor:ktor-client-gson:1.3.2")
 
     //Gson
     implementation("com.google.code.gson:gson:2.8.5")
