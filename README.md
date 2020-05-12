@@ -1,6 +1,6 @@
 ![JikanKt Banner](https://raw.githubusercontent.com/GSculerlor/JikanKt/master/assets/JikanKt.png)
 
-[![Discord Server](https://img.shields.io/discord/460491088004907029.svg?style=flat&logo=discord)](https://discord.gg/4tvCr36) [![CodeFactor](https://www.codefactor.io/repository/github/gsculerlor/jikankt/badge)](https://www.codefactor.io/repository/github/gsculerlor/jikankt)
+[![Discord Server](https://img.shields.io/discord/460491088004907029.svg?style=flat&logo=discord)](https://discord.gg/4tvCr36) [![CodeFactor](https://www.codefactor.io/repository/github/gsculerlor/jikankt/badge)](https://www.codefactor.io/repository/github/gsculerlor/jikankt) ![Build master branch](https://github.com/GSculerlor/JikanKt/workflows/Build%20master%20branch/badge.svg)
 
 API wrapper for [Jikan API](https://jikan.moe) build using Kotlin + Kotlin DSL + Coroutines power 🚀
 
