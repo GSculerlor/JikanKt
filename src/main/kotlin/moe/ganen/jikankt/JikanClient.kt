@@ -13,6 +13,8 @@ open class JikanClient {
             engine {
                 config {
                     protocols(listOf(Protocol.HTTP_1_1))
+                    //see: https://github.com/ktorio/ktor/issues/1708
+                    retryOnConnectionFailure(true)
                 }
             }
 
@@ -32,6 +34,6 @@ open class JikanClient {
 
     companion object {
         private const val JIKANKT_NAME = "JikanKt"
-        private const val JIKANKT_VERSION = "1.2.0"
+        private const val JIKANKT_VERSION = "1.3.0"
     }
 }
