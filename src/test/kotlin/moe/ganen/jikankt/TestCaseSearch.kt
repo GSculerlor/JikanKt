@@ -179,7 +179,6 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.malId, result.results?.get(0)?.malId)
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
-        assertEquals(2, result.lastPage)
         runBlocking { delay(3000) }
     }
 
