@@ -7,8 +7,10 @@ import moe.ganen.jikankt.exception.JikanException
 import moe.ganen.jikankt.models.base.types.AnimeSubEntity
 import moe.ganen.jikankt.models.base.types.MalSubEntity
 import moe.ganen.jikankt.models.prod.Producer
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 
 class TestCaseProducer {
 
@@ -44,18 +46,32 @@ class TestCaseProducer {
         runBlocking { delay(3000) }
     }
 
-    @Test(expected = JikanException::class)
+    @Test
     fun `test get bad ID producer return exception`() {
-        runBlocking { JikanKt.apply { restClient = RestClient(true) }.getProducer(712) }
+        assertThrows<JikanException> {
+            runBlocking {
+                JikanKt.apply { restClient = RestClient(true, url = "http://ganen.moe:8800/v3/") }.getProducer(712)
+            }
+        }
         runBlocking { delay(3000) }
     }
 
     @Test
     fun `test get bad ID producer`() {
-        val result = runBlocking { JikanKt.apply { restClient = RestClient(false) }.getProducer(712) }
+        val result = runBlocking {
+            JikanKt.apply { restClient = RestClient(false, url = "http://ganen.moe:8800/v3/") }.getProducer(712)
+        }
 
         assert(result.anime.isNullOrEmpty())
 
         runBlocking { delay(3000) }
+    }
+
+    companion object {
+        @BeforeAll
+        @JvmStatic
+        internal fun setup() {
+            JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/") }
+        }
     }
 }

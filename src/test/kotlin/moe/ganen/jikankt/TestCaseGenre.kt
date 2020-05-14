@@ -2,13 +2,15 @@ package moe.ganen.jikankt
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
+import moe.ganen.jikankt.connection.RestClient
 import moe.ganen.jikankt.models.base.types.AnimeSubEntity
 import moe.ganen.jikankt.models.base.types.MalSubEntity
 import moe.ganen.jikankt.models.base.types.MangaSubEntity
 import moe.ganen.jikankt.models.genre.Genre
 import moe.ganen.jikankt.models.genre.RequestType
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
 
 class TestCaseGenre {
 
@@ -23,7 +25,7 @@ class TestCaseGenre {
                 )
             )
 
-        val result = runBlocking { JikanKt.getGenreType(RequestType.ANIME, 1) }
+        val result = runBlocking { JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/") }.getGenreType(RequestType.ANIME, 1) }
 
         assertEquals(expected.metadata, result.metadata)
         assertEquals(expected.anime?.get(0)?.title, result.anime?.get(0)?.title)
@@ -102,5 +104,13 @@ class TestCaseGenre {
         assert(result.anime.isNullOrEmpty())
 
         runBlocking { delay(3000) }
+    }
+
+    companion object {
+        @BeforeAll
+        @JvmStatic
+        internal fun setup() {
+            JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/") }
+        }
     }
 }

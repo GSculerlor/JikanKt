@@ -2,11 +2,13 @@ package moe.ganen.jikankt
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
+import moe.ganen.jikankt.connection.RestClient
 import moe.ganen.jikankt.models.anime.*
 import moe.ganen.jikankt.models.base.types.*
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNull
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNull
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
 
 class TestCaseAnime {
 
@@ -26,7 +28,7 @@ class TestCaseAnime {
             openingThemes = listOf("\"Hana no Iro (ハナノイロ)\" by nano.RIPE (eps 2-13)"),
             endingThemes = listOf("\"Hana no Iro (ハナノイロ)\" by nano.RIPE (ep 1)")
         )
-        val result = runBlocking { JikanKt.getAnime(9289) }
+        val result = runBlocking { JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/") }.getAnime(9289) }
 
         assertEquals(expected.malId, result.malId)
         assertEquals(expected.title, result.title)
@@ -291,7 +293,7 @@ class TestCaseAnime {
     fun `test Sora no Aosa wo Shiru Hito yo Stats`() {
         val result = runBlocking { JikanKt.getAnimeStats(39569) }
 
-        assert(result.watching in 900..950)
+        assert(result.watching in 900..1000)
         assert(result.completed in 1600..1850)
         assert(result.onHold in 350..450)
         assert(result.dropped in 70..80)
@@ -482,4 +484,12 @@ class TestCaseAnime {
     }
 
     //endregion
+
+    companion object {
+        @BeforeAll
+        @JvmStatic
+        internal fun setup() {
+            JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/") }
+        }
+    }
 }

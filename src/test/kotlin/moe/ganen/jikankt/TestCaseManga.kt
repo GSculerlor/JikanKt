@@ -2,22 +2,24 @@ package moe.ganen.jikankt
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
+import moe.ganen.jikankt.connection.RestClient
 import moe.ganen.jikankt.models.anime.MangaCharacters
 import moe.ganen.jikankt.models.base.types.*
 import moe.ganen.jikankt.models.manga.Manga
 import moe.ganen.jikankt.models.manga.MangaNews
 import moe.ganen.jikankt.models.manga.MangaRecommendations
 import moe.ganen.jikankt.models.manga.MangaReviews
-import org.junit.Assert
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNull
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
 
 class TestCaseManga {
 
     //region getManga
 
     @Test
-    fun `test anime with correct ID`() {
+    fun `test manga with correct ID`() {
         val expected = Manga(
             malId = 78523,
             title = "ReLIFE",
@@ -46,7 +48,7 @@ class TestCaseManga {
     fun `test manga with bad ID`() {
         val result = runBlocking { JikanKt.getManga(7218) }
 
-        Assert.assertNull(result.title)
+        assertNull(result.title)
         runBlocking { delay(3000) }
     }
 
@@ -89,7 +91,7 @@ class TestCaseManga {
     fun `test manga with bad ID characters`() {
         val result = runBlocking { JikanKt.getMangaCharacters(7218) }
 
-        Assert.assertNull(result.characters)
+        assertNull(result.characters)
         runBlocking { delay(3000) }
     }
 
@@ -151,7 +153,7 @@ class TestCaseManga {
     fun `test manga with bad ID pictures`() {
         val result = runBlocking { JikanKt.getMangaPictures(7218) }
 
-        Assert.assertNull(result.pictures)
+        assertNull(result.pictures)
         runBlocking { delay(3000) }
     }
 
@@ -174,7 +176,7 @@ class TestCaseManga {
     fun `test manga with bad ID stats`() {
         val result = runBlocking { JikanKt.getMangaStats(7218) }
 
-        Assert.assertNull(result.scorePage)
+        assertNull(result.scorePage)
         runBlocking { delay(3000) }
     }
 
@@ -195,7 +197,7 @@ class TestCaseManga {
     fun `test manga with bad ID forum`() {
         val result = runBlocking { JikanKt.getMangaForum(7218) }
 
-        Assert.assertNull(result.topics)
+        assertNull(result.topics)
         runBlocking { delay(3000) }
     }
 
@@ -207,7 +209,7 @@ class TestCaseManga {
     fun `test Metro Survive more info`() {
         val result = runBlocking { JikanKt.getAnimeMoreInfo(7181) }
 
-        Assert.assertNull(result.moreInfo)
+        assertNull(result.moreInfo)
         runBlocking { delay(3000) }
     }
 
@@ -224,7 +226,7 @@ class TestCaseManga {
     fun `test manga with bad ID more info`() {
         val result = runBlocking { JikanKt.getMangaMoreInfo(7218) }
 
-        Assert.assertNull(result.moreInfo)
+        assertNull(result.moreInfo)
         runBlocking { delay(3000) }
     }
 
@@ -286,7 +288,7 @@ class TestCaseManga {
     fun `test manga with bad ID reviews`() {
         val result = runBlocking { JikanKt.getMangaReviews(7218) }
 
-        Assert.assertNull(result.reviews)
+        assertNull(result.reviews)
         runBlocking { delay(3000) }
     }
 
@@ -315,7 +317,7 @@ class TestCaseManga {
     fun `test manga with bad ID recommendations`() {
         val result = runBlocking { JikanKt.getMangaRecommendations(7218) }
 
-        Assert.assertNull(result.recommendations)
+        assertNull(result.recommendations)
         runBlocking { delay(3000) }
     }
 
@@ -339,9 +341,17 @@ class TestCaseManga {
     fun `test manga with bad ID user update`() {
         val result = runBlocking { JikanKt.getMangaUserUpdates(7218) }
 
-        Assert.assertNull(result.updates)
+        assertNull(result.updates)
         runBlocking { delay(3000) }
     }
 
     //endregion
+
+    companion object {
+        @BeforeAll
+        @JvmStatic
+        internal fun setup() {
+            JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/") }
+        }
+    }
 }

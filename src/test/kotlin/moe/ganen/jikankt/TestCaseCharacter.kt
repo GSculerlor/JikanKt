@@ -7,8 +7,10 @@ import moe.ganen.jikankt.exception.JikanException
 import moe.ganen.jikankt.models.base.types.Picture
 import moe.ganen.jikankt.models.character.Character
 import moe.ganen.jikankt.models.character.CharacterPictures
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 
 class TestCaseCharacter {
 
@@ -34,18 +36,24 @@ class TestCaseCharacter {
 
     @Test
     fun `test get character with bad ID`() {
-        val result = runBlocking { JikanKt.apply { restClient = RestClient(false) }.getCharacter(10) }
+        val result = runBlocking {
+            JikanKt.apply { restClient = RestClient(false, url = "http://ganen.moe:8800/v3/") }.getCharacter(10)
+        }
 
         assert(result.name.isNullOrEmpty())
 
         runBlocking { delay(3000) }
     }
 
-    @Test(expected = JikanException::class)
+    @Test
     fun `test get character with bad ID then throw exception`() {
-        runBlocking {
-            JikanKt.apply { restClient = RestClient(true) }.getCharacter(10)
+        assertThrows<JikanException> {
+            runBlocking {
+                JikanKt.apply { restClient = RestClient(true, url = "http://ganen.moe:8800/v3/") }.getCharacter(10)
+            }
         }
+
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -78,7 +86,9 @@ class TestCaseCharacter {
 
     @Test
     fun `test get character picture with bad ID`() {
-        val result = runBlocking { JikanKt.apply { restClient = RestClient(false) }.getCharacterPictures(10) }
+        val result = runBlocking {
+            JikanKt.apply { restClient = RestClient(false, url = "http://ganen.moe:8800/v3/") }.getCharacterPictures(10)
+        }
 
         assert(result.pictures.isNullOrEmpty())
 
@@ -88,9 +98,19 @@ class TestCaseCharacter {
     @Test
     fun `test get character picture with bad ID then throw exception`() {
         val result = runBlocking {
-            JikanKt.apply { restClient = RestClient(true) }.getCharacterPictures(10)
+            JikanKt.apply { restClient = RestClient(true, url = "http://ganen.moe:8800/v3/") }.getCharacterPictures(10)
         }
 
         assert(result.pictures.isNullOrEmpty())
+
+        runBlocking { delay(3000) }
+    }
+
+    companion object {
+        @BeforeAll
+        @JvmStatic
+        internal fun setup() {
+            JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/") }
+        }
     }
 }

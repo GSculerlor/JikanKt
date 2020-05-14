@@ -7,8 +7,10 @@ import moe.ganen.jikankt.exception.JikanException
 import moe.ganen.jikankt.models.base.types.Picture
 import moe.ganen.jikankt.models.person.Person
 import moe.ganen.jikankt.models.person.PersonPictures
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 
 class TestCasePerson {
 
@@ -34,19 +36,25 @@ class TestCasePerson {
 
     @Test
     fun `test get person with bad ID`() {
-        val result = runBlocking { JikanKt.apply { restClient = RestClient(false) }.getPerson(13308) }
+        val result = runBlocking {
+            JikanKt.apply { restClient = RestClient(false, url = "http://ganen.moe:8800/v3/") }.getPerson(13308)
+        }
 
         assert(result.name.isNullOrEmpty())
 
         runBlocking { delay(3000) }
     }
 
-    @Test(expected = JikanException::class)
+    @Test
     fun `test get person with bad ID then throw exception`() {
-        runBlocking {
-            JikanKt.apply { restClient = RestClient(true) }.getPerson(13308)
-            delay(3000)
+        assertThrows<JikanException> {
+            runBlocking {
+                JikanKt.apply { restClient = RestClient(true, url = "http://ganen.moe:8800/v3/") }.getPerson(13308)
+
+            }
         }
+
+        runBlocking { delay(3000) }
     }
 
     @Test
@@ -79,18 +87,32 @@ class TestCasePerson {
 
     @Test
     fun `test get person picture with bad ID`() {
-        val result = runBlocking { JikanKt.apply { restClient = RestClient(false) }.getPersonPictures(13308) }
+        val result = runBlocking {
+            JikanKt.apply { restClient = RestClient(false, url = "http://ganen.moe:8800/v3/") }.getPersonPictures(13308)
+        }
 
         assert(result.pictures.isNullOrEmpty())
 
         runBlocking { delay(3000) }
     }
 
-    @Test(expected = JikanException::class)
+    @Test
     fun `test get person picture with bad ID then throw exception`() {
-        runBlocking {
-            JikanKt.apply { restClient = RestClient(true) }.getPersonPictures(13308)
-            delay(3000)
+        assertThrows<JikanException> {
+            runBlocking {
+                JikanKt.apply { restClient = RestClient(true, url = "http://ganen.moe:8800/v3/") }
+                    .getPersonPictures(13308)
+            }
+        }
+
+        runBlocking { delay(3000) }
+    }
+
+    companion object {
+        @BeforeAll
+        @JvmStatic
+        internal fun setup() {
+            JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/") }
         }
     }
 }
