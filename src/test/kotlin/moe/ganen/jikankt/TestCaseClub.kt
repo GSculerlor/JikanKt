@@ -8,8 +8,10 @@ import moe.ganen.jikankt.models.base.types.ClubMember
 import moe.ganen.jikankt.models.base.types.MalSubEntity
 import moe.ganen.jikankt.models.club.Club
 import moe.ganen.jikankt.models.club.ClubMembers
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 
 class TestCaseClub {
 
@@ -48,15 +50,21 @@ class TestCaseClub {
         runBlocking { delay(3000) }
     }
 
-    @Test(expected = JikanException::class)
+    @Test
     fun `test get bad ID club return exception`() {
-        runBlocking { JikanKt.apply { restClient = RestClient(true) }.getClub(7787) }
+        assertThrows<JikanException> {
+            runBlocking {
+                JikanKt.apply { restClient = RestClient(true, url = "http://ganen.moe:8800/v3/") }.getClub(7787)
+            }
+        }
         runBlocking { delay(3000) }
     }
 
     @Test
     fun `test get bad ID club`() {
-        val result = runBlocking { JikanKt.apply { restClient = RestClient(false) }.getClub(7787) }
+        val result = runBlocking {
+            JikanKt.apply { restClient = RestClient(false, url = "http://ganen.moe:8800/v3/") }.getClub(7787)
+        }
 
         assert(result.mangaRelations.isNullOrEmpty())
         assert(result.animeRelations.isNullOrEmpty())
@@ -80,10 +88,20 @@ class TestCaseClub {
 
     @Test
     fun `test get bad ID club members`() {
-        val result = runBlocking { JikanKt.apply { restClient = RestClient(false) }.getClubMembers(7787) }
+        val result = runBlocking {
+            JikanKt.apply { restClient = RestClient(false, url = "http://ganen.moe:8800/v3/") }.getClubMembers(7787)
+        }
 
         assert(result.members.isNullOrEmpty())
 
         runBlocking { delay(3000) }
+    }
+
+    companion object {
+        @BeforeAll
+        @JvmStatic
+        internal fun setup() {
+            JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/") }
+        }
     }
 }

@@ -11,13 +11,20 @@ import io.ktor.http.HttpHeaders
 import moe.ganen.jikankt.JikanClient
 import moe.ganen.jikankt.exception.JikanException
 
-class RestClient(private val isDebug: Boolean) : JikanClient() {
+/**
+ * Class that handle request.
+ * @param isDebug: a boolean that indicate if you run it on debug or not. If yes, it'll throw exception if something happen.
+ * @param url: Custom URL, will use default (Jikan URL) if null or empty.
+ */
+class RestClient(private val isDebug: Boolean = false, private val url: String? = null) : JikanClient() {
     private val client = httpClient
     private val gson = Gson()
 
+    private val usedURL = if (url.isNullOrEmpty()) BASE_URL else url
+
     suspend fun request(endPoint: String, data: JsonObject? = null): JsonElement {
         try {
-            var url = BASE_URL + endPoint
+            var url = usedURL + endPoint
             if (data != null) {
                 url += "?" + data.entrySet().joinToString("&") { entry ->
                     "${entry.key}=${entry.value}"

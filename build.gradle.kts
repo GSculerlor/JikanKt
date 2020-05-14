@@ -11,31 +11,36 @@ repositories {
 }
 
 group = "com.github.GSculerlor"
-version = "1.2.0"
+version = "1.3.0"
+
+val ktorVersion: String by project
+val gsonVersion: String by project
+val coroutinesVersion: String by project
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
     //Coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.3.5")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:$coroutinesVersion")
 
     //Ktor
-    implementation("io.ktor:ktor-client-core:1.3.2")
-    implementation("io.ktor:ktor-client-core-jvm:1.3.2")
-    implementation("io.ktor:ktor-client-json:1.3.2")
-    implementation("io.ktor:ktor-client-json-jvm:1.3.2")
-    implementation("io.ktor:ktor-client-okhttp:1.3.2")
-    implementation("io.ktor:ktor-client-gson:1.3.2")
+    implementation("io.ktor:ktor-client-core:$ktorVersion")
+    implementation("io.ktor:ktor-client-core-jvm:$ktorVersion")
+    implementation("io.ktor:ktor-client-json:$ktorVersion")
+    implementation("io.ktor:ktor-client-json-jvm:$ktorVersion")
+    implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
+    implementation("io.ktor:ktor-client-gson:$ktorVersion")
 
     //Gson
-    implementation("com.google.code.gson:gson:2.8.5")
+    implementation("com.google.code.gson:gson:$gsonVersion")
 
     //kotlin-logging
     implementation("io.github.microutils:kotlin-logging:1.7.7")
     implementation("org.slf4j:slf4j-simple:1.7.26")
 
-    testImplementation("junit:junit:4.12")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.3.1")
 }
 
 tasks {
@@ -47,6 +52,6 @@ tasks {
     }
 
     test {
-        useJUnit()
+        useJUnitPlatform()
     }
 }

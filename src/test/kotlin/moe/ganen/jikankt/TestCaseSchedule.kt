@@ -2,11 +2,13 @@ package moe.ganen.jikankt
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
+import moe.ganen.jikankt.connection.RestClient
 import moe.ganen.jikankt.models.base.types.AnimeSubEntity
 import moe.ganen.jikankt.models.schedule.Day
 import moe.ganen.jikankt.models.schedule.Schedule
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
 
 class TestCaseSchedule {
 
@@ -57,5 +59,13 @@ class TestCaseSchedule {
         assert(expected.sunday.isNullOrEmpty())
 
         runBlocking { delay(3000) }
+    }
+
+    companion object {
+        @BeforeAll
+        @JvmStatic
+        internal fun setup() {
+            JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/") }
+        }
     }
 }

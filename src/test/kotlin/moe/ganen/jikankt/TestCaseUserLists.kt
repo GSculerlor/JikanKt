@@ -2,6 +2,7 @@ package moe.ganen.jikankt
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
+import moe.ganen.jikankt.connection.RestClient
 import moe.ganen.jikankt.models.base.types.AnimeListEntity
 import moe.ganen.jikankt.models.base.types.MangaListEntity
 import moe.ganen.jikankt.models.search.enums.AnimeStatus
@@ -11,8 +12,9 @@ import moe.ganen.jikankt.models.user.AnimeListSearchQuery
 import moe.ganen.jikankt.models.user.MangaListSearchQuery
 import moe.ganen.jikankt.models.user.UserAnimeList
 import moe.ganen.jikankt.models.user.UserMangaList
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
 
 class TestCaseUserLists {
 
@@ -89,5 +91,13 @@ class TestCaseUserLists {
         assert(result.anime?.isNotEmpty() ?: false)
 
         runBlocking { delay(3000) }
+    }
+
+    companion object {
+        @BeforeAll
+        @JvmStatic
+        internal fun setup() {
+            JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/") }
+        }
     }
 }

@@ -7,8 +7,10 @@ import moe.ganen.jikankt.exception.JikanException
 import moe.ganen.jikankt.models.base.types.*
 import moe.ganen.jikankt.models.search.*
 import moe.ganen.jikankt.models.search.enums.*
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -177,7 +179,6 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.malId, result.results?.get(0)?.malId)
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
-        assertEquals(2, result.lastPage)
         runBlocking { delay(3000) }
     }
 
@@ -441,12 +442,14 @@ class TestCaseSearch {
         runBlocking { delay(3000) }
     }
 
-    @Test(expected = JikanException::class)
+    @Test
     fun `test search random character return exception`() {
-        val jikan = JikanKt.apply {
-            restClient = RestClient(true)
+        assertThrows<JikanException> {
+            val jikan = JikanKt.apply {
+                restClient = RestClient(true)
+            }
+            runBlocking { jikan.searchCharacter("Bjir").results?.get(0) }
         }
-        runBlocking { jikan.searchCharacter("Bjir").results?.get(0) }
         runBlocking { delay(3000) }
     }
 
@@ -476,4 +479,12 @@ class TestCaseSearch {
     }
 
     //endregion
+
+    companion object {
+        @BeforeAll
+        @JvmStatic
+        internal fun setup() {
+            JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/") }
+        }
+    }
 }

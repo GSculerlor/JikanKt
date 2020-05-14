@@ -12,7 +12,7 @@ repositories {
 }
     
 dependencies {
-    implementation 'com.github.GSculerlor:JikanKt:1.2.0'
+    implementation 'com.github.GSculerlor:JikanKt:1.3.0'
 }
 ```
 with Maven
@@ -27,7 +27,7 @@ with Maven
 <dependency>
     <groupId>com.github.GSculerlor</groupId>
     <artifactId>JikanKt</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 
@@ -38,8 +38,18 @@ fun main() {
         val anime = JikanKt.getAnime(38992)
         println(anime)
     }
+    
+    //Using custom domain
+    runBlocking {
+        val manga = JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/")  }.getManga(2)
+        println(manga)
+    }
 }
 ```
+Note that `JikanKt` is an object, so it's singleton. So `apply { }` will be applied on every request. If you have to request
+to multiple domains, make sure to apply it per-request!
+More details on how to use it, you can check test package (yes, I'm too lazy to create docs at this moment teehee)
+
 # Release
 For latest release or to check the changelogs, please check Release tab.
 

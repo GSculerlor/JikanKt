@@ -6,8 +6,10 @@ import moe.ganen.jikankt.connection.RestClient
 import moe.ganen.jikankt.exception.JikanException
 import moe.ganen.jikankt.models.user.User
 import moe.ganen.jikankt.models.user.enums.HistoryType
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -72,17 +74,31 @@ class TestCaseUser {
         runBlocking { delay(3000) }
     }
 
-    @Test(expected = JikanException::class)
+    @Test
     fun `test get bjir123 profile throw exception`() {
-        runBlocking { JikanKt.apply { restClient = RestClient(true) }.getUser("bjir123") }
+        assertThrows<JikanException> {
+            runBlocking {
+                JikanKt.apply { restClient = RestClient(true, url = "http://ganen.moe:8800/v3/") }.getUser("bjir123")
+            }
+        }
         runBlocking { delay(3000) }
     }
 
     @Test
     fun `test get bjir123 profile`() {
-        val result = runBlocking { JikanKt.apply { restClient = RestClient(false) }.getUser("bjir123") }
+        val result = runBlocking {
+            JikanKt.apply { restClient = RestClient(false, url = "http://ganen.moe:8800/v3/") }.getUser("bjir123")
+        }
 
         assert(result.username.isNullOrEmpty())
         runBlocking { delay(3000) }
+    }
+
+    companion object {
+        @BeforeAll
+        @JvmStatic
+        internal fun setup() {
+            JikanKt.apply { restClient = RestClient(url = "http://ganen.moe:8800/v3/") }
+        }
     }
 }
