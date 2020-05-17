@@ -33,20 +33,6 @@ object JikanKt {
     var restClient = RestClient()
     private val gson = GsonBuilder().registerTypeAdapter(Entity::class.java, InterfaceAdapter<Entity>()).create()
 
-    /**
-     * Function to set the internal restClient
-     * @param restClient: the new restClient JikanKT will use for its requests
-     */
-//    fun setRestClient(restClient: RestClient) {
-//        this.restClient = restClient
-//    }
-
-    /**
-     * Function to get the internal restClient
-     * @return the current restClient JikanKT uses for its requests
-     */
-//    fun getRestClient(): RestClient = restClient
-
 
     //region Anime
 
