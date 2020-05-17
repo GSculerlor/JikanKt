@@ -41,9 +41,12 @@ object JikanKt {
         this.restClient = restClient
     }
 
-    fun getRestClient(restClient: RestClient) {
-        this.restClient = restClient
-    }
+    /**
+     * Function to get the internal restClient
+     * @return the current restClient JikanKT uses for its requests
+     */
+    fun getRestClient(): RestClient = restClient
+
 
     //region Anime
 
