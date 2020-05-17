@@ -50,7 +50,7 @@ class SimpleLogger(name: String) : MarkerIgnoringBase() {
             if (c == '.') lastDotPos = index
         }
         var betterName = betterNameBuilder.toString()
-        betterName = betterName.take(betterName.length - 1) + name.substring(lastDotPos, name.length)
+        betterName = betterName.take(betterName.length - 1) + name.substring(lastDotPos, name.length - 1)
         buf.append(betterName).append(" - ")
 
 
