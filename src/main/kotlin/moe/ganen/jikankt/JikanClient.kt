@@ -27,8 +27,6 @@ open class JikanClient {
         }
     }
 
-
-
     init {
         JIKANKT_LOG.info("Initialize $JIKANKT_NAME version $JIKANKT_VERSION")
     }
@@ -37,8 +35,5 @@ open class JikanClient {
         private const val JIKANKT_NAME = "JikanKt"
         private const val JIKANKT_VERSION = "1.3.0"
         val JIKANKT_LOG: Logger = JikanLogger().getLog(JIKANKT_NAME)
-        init {
-            JIKANKT_LOG.info("a")
-        }
     }
 }
