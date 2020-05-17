@@ -38,20 +38,22 @@ class SimpleLogger(name: String) : MarkerIgnoringBase() {
         buf.append("] ")
 
 
-        val betterNameBuilder = StringBuilder()
-        var lastDotPos = -1
+        val finalName = if (name.contains(".")) {
+            val betterNameBuilder = StringBuilder()
+            var lastDotPos = -1
 
-        name.forEachIndexed { index, c ->
-            if (index == lastDotPos + 1) {
-                betterNameBuilder
-                    .append(c)
-                    .append('.')
+            name.forEachIndexed { index, c ->
+                if (index == lastDotPos + 1) {
+                    betterNameBuilder
+                        .append(c)
+                        .append('.')
+                }
+                if (c == '.') lastDotPos = index
             }
-            if (c == '.') lastDotPos = index
-        }
-        var betterName = betterNameBuilder.toString()
-        betterName = betterName.take(betterName.length - 1) + name.substring(lastDotPos, name.length - 1)
-        buf.append(betterName).append(" - ")
+            val betterName = betterNameBuilder.toString()
+            betterName.take(betterName.length - 1) + name.substring(kotlin.math.max(lastDotPos, 0), name.length)
+        } else name
+        buf.append(finalName).append(" - ")
 
 
 
@@ -152,7 +154,7 @@ class SimpleLogger(name: String) : MarkerIgnoringBase() {
     }
 
     override fun trace(format: String, arg: Any?) {
-       log(LOG_LEVEL_TRACE, format.format(arg))
+        log(LOG_LEVEL_TRACE, format.format(arg))
     }
 
     override fun trace(format: String, arg1: Any?, arg2: Any?) {
