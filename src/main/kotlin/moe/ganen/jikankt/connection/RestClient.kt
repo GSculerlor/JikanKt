@@ -31,7 +31,7 @@ class RestClient(private val isDebug: Boolean = false, private val url: String? 
                 }
             }
 
-            logger.info { "Requesting to Jikan: $url" }
+            JIKANKT_LOG.info("Requesting to Jikan: $url")
 
 
             val response = client.get<HttpResponse>(url) {
@@ -47,7 +47,7 @@ class RestClient(private val isDebug: Boolean = false, private val url: String? 
                 null
             }
 
-            logger.debug("Response from Jikan: ${response.status.value}, body: $json")
+            JIKANKT_LOG.debug("Response from Jikan: ${response.status.value}, body: $json")
 
             if (response.status.value !in 200..299) {
                 if (response.status.value in 500..599) {
@@ -78,17 +78,17 @@ class RestClient(private val isDebug: Boolean = false, private val url: String? 
         }
     }
 
-    private fun exceptionHandler(ex: java.lang.Exception, message: String? = null) : JsonObject {
+    private fun exceptionHandler(ex: Exception, message: String? = null) : JsonObject {
         if (message.isNullOrEmpty())
-            logger.error { "Something went wrong! Exception: ${ex.localizedMessage}" }
+            JIKANKT_LOG.error("Something went wrong! Exception: ${ex.localizedMessage}")
         else
-            logger.error(ex) { message }
+            JIKANKT_LOG.error(message, ex)
 
         //Will return empty json object instead
         return JsonObject()
     }
 
     companion object {
-        private const val BASE_URL = "https://api.jikan.moe/v3/"
+        const val BASE_URL = "https://api.jikan.moe/v3/"
     }
 }
