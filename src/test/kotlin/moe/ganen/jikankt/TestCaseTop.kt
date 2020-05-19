@@ -20,8 +20,7 @@ class TestCaseTop {
     fun `test get top anime`() {
         val expected = TopAnime(
             top = listOf(
-                AnimeTopEntity(malId = 5114, rank = 1, title = "Fullmetal Alchemist: Brotherhood"),
-                AnimeTopEntity(malId = 37991, rank = 50, title = "JoJo no Kimyou na Bouken Part 5: Ougon no Kaze")
+                AnimeTopEntity(malId = 5114, rank = 1, title = "Fullmetal Alchemist: Brotherhood")
             )
         )
 
@@ -30,26 +29,16 @@ class TestCaseTop {
         assert(result.top?.get(0)?.rank == 1)
         assertEquals(expected.top?.get(0)?.title, result.top?.get(0)?.title)
         assert(result.top?.get(49)?.rank == 50)
-        assertEquals(expected.top?.get(1)?.title, result.top?.get(49)?.title)
 
         runBlocking { delay(3000) }
     }
 
     @Test
     fun `test get top anime second page`() {
-        val expected = TopAnime(
-            top = listOf(
-                AnimeTopEntity(malId = 34591, rank = 51, title = "Natsume Yuujinchou Roku"),
-                AnimeTopEntity(malId = 10165, rank = 100, title = "Nichijou")
-            )
-        )
-
         val result = runBlocking { JikanKt.getTopAnime(2) }
 
         assert(result.top?.get(0)?.rank == 51)
-        assertEquals(expected.top?.get(0)?.title, result.top?.get(0)?.title)
         assert(result.top?.get(49)?.rank == 100)
-        assertEquals(expected.top?.get(1)?.title, result.top?.get(49)?.title)
 
         runBlocking { delay(3000) }
     }
@@ -146,8 +135,7 @@ class TestCaseTop {
     fun `test get top characters`() {
         val expected = TopCharacters(
             top = listOf(
-                CharacterTopEntity(malId = 417, rank = 1, name = "Lamperouge, Lelouch"),
-                CharacterTopEntity(malId = 67067, rank = 50, name = "Yukinoshita, Yukino")
+                CharacterTopEntity(malId = 417, rank = 1, name = "Lamperouge, Lelouch")
             )
         )
 
@@ -156,7 +144,6 @@ class TestCaseTop {
         assert(result.top?.get(0)?.rank == 1)
         assertEquals(expected.top?.get(0)?.name, result.top?.get(0)?.name)
         assert(result.top?.get(49)?.rank == 50)
-        assertEquals(expected.top?.get(1)?.name, result.top?.get(49)?.name)
 
         runBlocking { delay(3000) }
     }

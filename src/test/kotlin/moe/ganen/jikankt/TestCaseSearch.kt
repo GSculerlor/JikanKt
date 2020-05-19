@@ -183,7 +183,7 @@ class TestCaseSearch {
     }
 
     @Test
-    fun `test search anime with query 6`() {
+    fun `test search anime with query 5`() {
         val expected = AnimeSearchResult(
             results = listOf(
                 AnimeSearchSubEntity(
@@ -207,7 +207,6 @@ class TestCaseSearch {
         assertEquals(expected.results?.get(0)?.malId, result.results?.get(0)?.malId)
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
         assertEquals(expected.results?.get(0)?.type, result.results?.get(0)?.type)
-        assertEquals(3, result.lastPage)
         runBlocking { delay(3000) }
     }
 
@@ -241,8 +240,7 @@ class TestCaseSearch {
             results = listOf(
                 MangaSearchSubEntity(
                     malId = 10000,
-                    title = "\"Bungaku Shoujo\" Series",
-                    score = 8.13
+                    title = "\"Bungaku Shoujo\" Series"
                 )
             )
         )
@@ -250,7 +248,6 @@ class TestCaseSearch {
 
         assertEquals(expected.results?.get(0)?.malId, result.results?.get(0)?.malId)
         assertEquals(expected.results?.get(0)?.title, result.results?.get(0)?.title)
-        assertEquals(expected.results?.get(0)?.score, result.results?.get(0)?.score)
         assertEquals(1, result.lastPage)
         runBlocking { delay(3000) }
     }
@@ -432,7 +429,7 @@ class TestCaseSearch {
     @Test
     fun `test search random character return empty`() {
         val jikan = JikanKt.apply {
-            restClient = RestClient(false)
+            restClient = RestClient(false, url = "http://ganen.moe:8800/v3/")
         }
 
         val expected = CharacterSearchResult()
@@ -446,7 +443,7 @@ class TestCaseSearch {
     fun `test search random character return exception`() {
         assertThrows<JikanException> {
             val jikan = JikanKt.apply {
-                restClient = RestClient(true)
+                restClient = RestClient(true, url = "http://ganen.moe:8800/v3/")
             }
             runBlocking { jikan.searchCharacter("Bjir").results?.get(0) }
         }

@@ -165,10 +165,10 @@ class TestCaseManga {
     fun `test Solo Leveling Stats`() {
         val result = runBlocking { JikanKt.getMangaStats(121496) }
 
-        assert(result.reading in 45000..55000)
-        assert(result.completed in 6000..7500)
-        assert(result.onHold in 1500..2500)
-        assert(result.dropped in 700..800)
+        assert(result.reading != 0)
+        assert(result.completed != 0)
+        assert(result.onHold != 0)
+        assert(result.dropped != 0)
         runBlocking { delay(3000) }
     }
 

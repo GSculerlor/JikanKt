@@ -293,10 +293,10 @@ class TestCaseAnime {
     fun `test Sora no Aosa wo Shiru Hito yo Stats`() {
         val result = runBlocking { JikanKt.getAnimeStats(39569) }
 
-        assert(result.watching in 900..1000)
-        assert(result.completed in 1600..1850)
-        assert(result.onHold in 350..450)
-        assert(result.dropped in 70..80)
+        assert(result.watching != 0)
+        assert(result.completed != 0)
+        assert(result.onHold != 0)
+        assert(result.dropped != 0)
         runBlocking { delay(3000) }
     }
 
