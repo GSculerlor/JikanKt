@@ -48,7 +48,8 @@ fun main() {
 ```
 Note that `JikanKt` is an object, so it's singleton. So `apply { }` will be applied on every request. If you have to request
 to multiple domains, make sure to apply it per-request!
-More details on how to use it, you can check test package (yes, I'm too lazy to create docs at this moment teehee)
+
+For documentation, please check [here](https://ganen.moe/jikankt/docs/).
 
 # Release
 For latest release or to check the changelogs, please check Release tab.
