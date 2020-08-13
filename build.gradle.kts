@@ -12,7 +12,7 @@ repositories {
 }
 
 group = "com.github.GSculerlor"
-version = "1.3.0"
+version = "1.3.2"
 
 val ktorVersion: String by project
 val gsonVersion: String by project
@@ -57,6 +57,6 @@ tasks {
 
     dokka {
         outputFormat = "html"
-        outputDirectory = "$buildDir/dokka"
+        outputDirectory = "$rootDir/docs"
     }
 }

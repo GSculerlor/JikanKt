@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JikanKt.getUserAnimeList - JikanKt</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">JikanKt</a>&nbsp;/&nbsp;<a href="../index.html">moe.ganen.jikankt</a>&nbsp;/&nbsp;<a href="index.html">JikanKt</a>&nbsp;/&nbsp;<a href="./get-user-anime-list.html">getUserAnimeList</a><br/>
+<br/>
+<h1>getUserAnimeList</h1>
+<a name="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, moe.ganen.jikankt.models.user.enums.AnimeStatusType, kotlin.Int)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getUserAnimeList</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, moe.ganen.jikankt.models.user.enums.AnimeStatusType, kotlin.Int)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, moe.ganen.jikankt.models.user.enums.AnimeStatusType, kotlin.Int)/filter">filter</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.user.enums/-anime-status-type/index.html"><span class="identifier">AnimeStatusType</span></a>&nbsp;<span class="symbol">=</span>&nbsp;AnimeStatusType.All<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, moe.ganen.jikankt.models.user.enums.AnimeStatusType, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.user/-user-anime-list/index.html"><span class="identifier">UserAnimeList</span></a></code>
+<p>Fetches MyAnimeList user's anime list.</p>
+<h3>Parameters</h3>
+<p><a name="username"></a>
+<code>username</code> - : User's username on MyAnimeList.</p>
+<p><a name="filter"></a>
+<code>filter</code> - : Optional, filter list.</p>
+<p><a name="page"></a>
+<code>page</code> - : Optional, default is 1. Index of page.</p>
+<p><strong>Return</strong><br/>
+User's anime list.</p>
+<a name="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, kotlin.String, kotlin.Int, moe.ganen.jikankt.models.user.AnimeListSearchQuery)"></a>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getUserAnimeList</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, kotlin.String, kotlin.Int, moe.ganen.jikankt.models.user.AnimeListSearchQuery)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, kotlin.String, kotlin.Int, moe.ganen.jikankt.models.user.AnimeListSearchQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, kotlin.String, kotlin.Int, moe.ganen.jikankt.models.user.AnimeListSearchQuery)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, kotlin.String, kotlin.Int, moe.ganen.jikankt.models.user.AnimeListSearchQuery)/additionalQuery">additionalQuery</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.user/-anime-list-search-query/index.html"><span class="identifier">AnimeListSearchQuery</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.user/-user-anime-list/index.html"><span class="identifier">UserAnimeList</span></a></code>
+<p>Fetches MyAnimeList user's anime list.</p>
+<h3>Parameters</h3>
+<p><a name="username"></a>
+<code>username</code> - : User's username on MyAnimeList.</p>
+<p><a name="query"></a>
+<code>query</code> - : Query to filter by.</p>
+<p><a name="additionalQuery"></a>
+<code>additionalQuery</code> - : Optional, additional query.</p>
+<p><a name="page"></a>
+<code>page</code> - : Optional, default is 1. Index of page.</p>
+<p><strong>Return</strong><br/>
+User's anime list.</p>
+</BODY>
+</HTML>

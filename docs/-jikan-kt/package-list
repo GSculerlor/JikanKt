@@ -1,0 +1,23 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:moe.ganen.jikankt.utils$deserialize(com.google.gson.Gson, com.google.gson.JsonElement, java.lang.reflect.Type)moe.ganen.jikankt.utils/com.google.gson.-gson/deserialize.html
+moe.ganen.jikankt
+moe.ganen.jikankt.connection
+moe.ganen.jikankt.exception
+moe.ganen.jikankt.models.anime
+moe.ganen.jikankt.models.base
+moe.ganen.jikankt.models.base.types
+moe.ganen.jikankt.models.character
+moe.ganen.jikankt.models.club
+moe.ganen.jikankt.models.genre
+moe.ganen.jikankt.models.manga
+moe.ganen.jikankt.models.person
+moe.ganen.jikankt.models.prod
+moe.ganen.jikankt.models.schedule
+moe.ganen.jikankt.models.search
+moe.ganen.jikankt.models.search.enums
+moe.ganen.jikankt.models.season
+moe.ganen.jikankt.models.top
+moe.ganen.jikankt.models.user
+moe.ganen.jikankt.models.user.enums
+moe.ganen.jikankt.utils

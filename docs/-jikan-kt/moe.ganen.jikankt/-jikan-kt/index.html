@@ -1,0 +1,429 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JikanKt - JikanKt</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">JikanKt</a>&nbsp;/&nbsp;<a href="../index.html">moe.ganen.jikankt</a>&nbsp;/&nbsp;<a href="./index.html">JikanKt</a><br/>
+<br/>
+<h1>JikanKt</h1>
+<code><span class="keyword">object </span><span class="identifier">JikanKt</span></code>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="rest-client.html">restClient</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">restClient</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.connection/-rest-client/index.html"><span class="identifier">RestClient</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="get-anime.html">getAnime</a></h4>
+</td>
+<td>
+<p>Function to get anime by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAnime</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnime(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.anime/-anime/index.html"><span class="identifier">Anime</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-anime-characters-staff.html">getAnimeCharactersStaff</a></h4>
+</td>
+<td>
+<p>Function to get anime's characters and staff by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAnimeCharactersStaff</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimeCharactersStaff(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.anime/-anime-characters-staff/index.html"><span class="identifier">AnimeCharactersStaff</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-anime-episodes.html">getAnimeEpisodes</a></h4>
+</td>
+<td>
+<p>Function to get anime's episodes by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAnimeEpisodes</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimeEpisodes(kotlin.Int, kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimeEpisodes(kotlin.Int, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.anime/-anime-episodes/index.html"><span class="identifier">AnimeEpisodes</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-anime-forum.html">getAnimeForum</a></h4>
+</td>
+<td>
+<p>Function to get anime's forum by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAnimeForum</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimeForum(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.anime/-anime-forum/index.html"><span class="identifier">AnimeForum</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-anime-more-info.html">getAnimeMoreInfo</a></h4>
+</td>
+<td>
+<p>Function to get anime's more info by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAnimeMoreInfo</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimeMoreInfo(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.anime/-anime-more-info/index.html"><span class="identifier">AnimeMoreInfo</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-anime-news.html">getAnimeNews</a></h4>
+</td>
+<td>
+<p>Function to get anime's news by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAnimeNews</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimeNews(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.anime/-anime-news/index.html"><span class="identifier">AnimeNews</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-anime-pictures.html">getAnimePictures</a></h4>
+</td>
+<td>
+<p>Function to get anime's pictures by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAnimePictures</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimePictures(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.anime/-anime-pictures/index.html"><span class="identifier">AnimePictures</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-anime-recommendations.html">getAnimeRecommendations</a></h4>
+</td>
+<td>
+<p>Function to get anime's recommendations by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAnimeRecommendations</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimeRecommendations(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.anime/-anime-recommendations/index.html"><span class="identifier">AnimeRecommendations</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-anime-reviews.html">getAnimeReviews</a></h4>
+</td>
+<td>
+<p>Function to get anime's reviews by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAnimeReviews</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimeReviews(kotlin.Int, kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimeReviews(kotlin.Int, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.anime/-anime-reviews/index.html"><span class="identifier">AnimeReviews</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-anime-stats.html">getAnimeStats</a></h4>
+</td>
+<td>
+<p>Function to get anime's stats by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAnimeStats</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimeStats(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.anime/-anime-stats/index.html"><span class="identifier">AnimeStats</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-anime-user-updates.html">getAnimeUserUpdates</a></h4>
+</td>
+<td>
+<p>Function to get anime's user updates by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAnimeUserUpdates</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimeUserUpdates(kotlin.Int, kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimeUserUpdates(kotlin.Int, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.anime/-anime-user-updates/index.html"><span class="identifier">AnimeUserUpdates</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-anime-videos.html">getAnimeVideos</a></h4>
+</td>
+<td>
+<p>Function to get anime's videos by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getAnimeVideos</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getAnimeVideos(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.anime/-anime-videos/index.html"><span class="identifier">AnimeVideos</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-character.html">getCharacter</a></h4>
+</td>
+<td>
+<p>Function to get character by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getCharacter</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getCharacter(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.character/-character/index.html"><span class="identifier">Character</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-character-pictures.html">getCharacterPictures</a></h4>
+</td>
+<td>
+<p>Function to get character's pictures by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getCharacterPictures</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getCharacterPictures(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.character/-character-pictures/index.html"><span class="identifier">CharacterPictures</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-club.html">getClub</a></h4>
+</td>
+<td>
+<p>A single club object with all its details.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getClub</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getClub(kotlin.Int)/clubId">clubId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.club/-club/index.html"><span class="identifier">Club</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-club-members.html">getClubMembers</a></h4>
+</td>
+<td>
+<p>Fetches list of club members.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getClubMembers</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getClubMembers(kotlin.Int, kotlin.Int)/clubId">clubId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getClubMembers(kotlin.Int, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.club/-club-members/index.html"><span class="identifier">ClubMembers</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-genre-type.html">getGenreType</a></h4>
+</td>
+<td>
+<p>Function to get genre detail on MyAnimeList.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getGenreType</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getGenreType(moe.ganen.jikankt.models.genre.RequestType, kotlin.Int, kotlin.Int)/requestType">requestType</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.genre/-request-type/index.html"><span class="identifier">RequestType</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getGenreType(moe.ganen.jikankt.models.genre.RequestType, kotlin.Int, kotlin.Int)/genreId">genreId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getGenreType(moe.ganen.jikankt.models.genre.RequestType, kotlin.Int, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.genre/-genre/index.html"><span class="identifier">Genre</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-magazine.html">getMagazine</a></h4>
+</td>
+<td>
+<p>Function to get list of manga based on their magazine/serializer/publisher.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getMagazine</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getMagazine(kotlin.Int, kotlin.Int)/magazineId">magazineId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getMagazine(kotlin.Int, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.prod/-magazine/index.html"><span class="identifier">Magazine</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-manga.html">getManga</a></h4>
+</td>
+<td>
+<p>Function to get manga by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getManga</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getManga(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.manga/-manga/index.html"><span class="identifier">Manga</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-manga-characters.html">getMangaCharacters</a></h4>
+</td>
+<td>
+<p>Function to get manga's characters by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getMangaCharacters</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getMangaCharacters(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.anime/-manga-characters/index.html"><span class="identifier">MangaCharacters</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-manga-forum.html">getMangaForum</a></h4>
+</td>
+<td>
+<p>Function to get manga's forum by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getMangaForum</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getMangaForum(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.manga/-manga-forum/index.html"><span class="identifier">MangaForum</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-manga-more-info.html">getMangaMoreInfo</a></h4>
+</td>
+<td>
+<p>Function to get manga's more info by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getMangaMoreInfo</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getMangaMoreInfo(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.manga/-manga-more-info/index.html"><span class="identifier">MangaMoreInfo</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-manga-news.html">getMangaNews</a></h4>
+</td>
+<td>
+<p>Function to get manga's news by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getMangaNews</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getMangaNews(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.manga/-manga-news/index.html"><span class="identifier">MangaNews</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-manga-pictures.html">getMangaPictures</a></h4>
+</td>
+<td>
+<p>Function to get manga's pictures by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getMangaPictures</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getMangaPictures(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.manga/-manga-pictures/index.html"><span class="identifier">MangaPictures</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-manga-recommendations.html">getMangaRecommendations</a></h4>
+</td>
+<td>
+<p>Function to get manga's recommendations by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getMangaRecommendations</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getMangaRecommendations(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.manga/-manga-recommendations/index.html"><span class="identifier">MangaRecommendations</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-manga-reviews.html">getMangaReviews</a></h4>
+</td>
+<td>
+<p>Function to get manga's reviews by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getMangaReviews</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getMangaReviews(kotlin.Int, kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getMangaReviews(kotlin.Int, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.manga/-manga-reviews/index.html"><span class="identifier">MangaReviews</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-manga-stats.html">getMangaStats</a></h4>
+</td>
+<td>
+<p>Function to get manga's stats by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getMangaStats</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getMangaStats(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.manga/-manga-stats/index.html"><span class="identifier">MangaStats</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-manga-user-updates.html">getMangaUserUpdates</a></h4>
+</td>
+<td>
+<p>Function to get manga's user updates by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getMangaUserUpdates</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getMangaUserUpdates(kotlin.Int, kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getMangaUserUpdates(kotlin.Int, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.manga/-manga-user-updates/index.html"><span class="identifier">MangaUserUpdates</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-person.html">getPerson</a></h4>
+</td>
+<td>
+<p>Function to get person by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getPerson</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getPerson(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.person/-person/index.html"><span class="identifier">Person</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-person-pictures.html">getPersonPictures</a></h4>
+</td>
+<td>
+<p>Function to get person's pictures by it's MyAnimeList id</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getPersonPictures</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getPersonPictures(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.person/-person-pictures/index.html"><span class="identifier">PersonPictures</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-producer.html">getProducer</a></h4>
+</td>
+<td>
+<p>Function to get list of anime based on their producer.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getProducer</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getProducer(kotlin.Int, kotlin.Int)/producerId">producerId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getProducer(kotlin.Int, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.prod/-producer/index.html"><span class="identifier">Producer</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-schedule.html">getSchedule</a></h4>
+</td>
+<td>
+<p>Function to get all anime schedule in this season.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getSchedule</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.schedule/-schedule/index.html"><span class="identifier">Schedule</span></a></code>
+<p>Function to get all anime schedule in this season filtered by day.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getSchedule</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getSchedule(moe.ganen.jikankt.models.schedule.Day)/day">day</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.schedule/-day/index.html"><span class="identifier">Day</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.schedule/-schedule/index.html"><span class="identifier">Schedule</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-season.html">getSeason</a></h4>
+</td>
+<td>
+<p>Function to get anime list by it's season.
+NOTE: If year and/or season is not specified, it'll return current season instead.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getSeason</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getSeason(kotlin.Int, moe.ganen.jikankt.models.season.SeasonType)/year">year</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getSeason(kotlin.Int, moe.ganen.jikankt.models.season.SeasonType)/season">season</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.season/-season-type/index.html"><span class="identifier">SeasonType</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.season/-season/index.html"><span class="identifier">Season</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-season-archive.html">getSeasonArchive</a></h4>
+</td>
+<td>
+<p>Function to get archived season on MyAnimeList.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getSeasonArchive</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.season/-season-archives/index.html"><span class="identifier">SeasonArchives</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-season-later.html">getSeasonLater</a></h4>
+</td>
+<td>
+<p>Function to get later season anime list.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getSeasonLater</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.season/-season/index.html"><span class="identifier">Season</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-top-anime.html">getTopAnime</a></h4>
+</td>
+<td>
+<p>Function to get all top anime on MyAnimeList.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getTopAnime</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getTopAnime(kotlin.Int, moe.ganen.jikankt.models.top.TopSubtype)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getTopAnime(kotlin.Int, moe.ganen.jikankt.models.top.TopSubtype)/subtype">subtype</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.top/-top-subtype/index.html"><span class="identifier">TopSubtype</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;TopSubtype.NONE<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.top/-top-anime/index.html"><span class="identifier">TopAnime</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-top-characters.html">getTopCharacters</a></h4>
+</td>
+<td>
+<p>Function to get all top characters on MyAnimeList.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getTopCharacters</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getTopCharacters(kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.top/-top-characters/index.html"><span class="identifier">TopCharacters</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-top-manga.html">getTopManga</a></h4>
+</td>
+<td>
+<p>Function to get all top manga on MyAnimeList.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getTopManga</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getTopManga(kotlin.Int, moe.ganen.jikankt.models.top.TopSubtype)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getTopManga(kotlin.Int, moe.ganen.jikankt.models.top.TopSubtype)/subtype">subtype</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.top/-top-subtype/index.html"><span class="identifier">TopSubtype</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;TopSubtype.NONE<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.top/-top-manga/index.html"><span class="identifier">TopManga</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-top-people.html">getTopPeople</a></h4>
+</td>
+<td>
+<p>Function to get all top people on MyAnimeList.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getTopPeople</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getTopPeople(kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.top/-top-people/index.html"><span class="identifier">TopPeople</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-user.html">getUser</a></h4>
+</td>
+<td>
+<p>Fetches MyAnimeList user related data.
+Note: About is returned in HTML as MyAnimeList allows custom "about" sections for users that can consist of images,
+formatting, etc.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getUser</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUser(kotlin.String)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.user/-user/index.html"><span class="identifier">User</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-user-anime-list.html">getUserAnimeList</a></h4>
+</td>
+<td>
+<p>Fetches MyAnimeList user's anime list.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getUserAnimeList</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, moe.ganen.jikankt.models.user.enums.AnimeStatusType, kotlin.Int)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, moe.ganen.jikankt.models.user.enums.AnimeStatusType, kotlin.Int)/filter">filter</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.user.enums/-anime-status-type/index.html"><span class="identifier">AnimeStatusType</span></a>&nbsp;<span class="symbol">=</span>&nbsp;AnimeStatusType.All<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, moe.ganen.jikankt.models.user.enums.AnimeStatusType, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.user/-user-anime-list/index.html"><span class="identifier">UserAnimeList</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getUserAnimeList</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, kotlin.String, kotlin.Int, moe.ganen.jikankt.models.user.AnimeListSearchQuery)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, kotlin.String, kotlin.Int, moe.ganen.jikankt.models.user.AnimeListSearchQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, kotlin.String, kotlin.Int, moe.ganen.jikankt.models.user.AnimeListSearchQuery)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserAnimeList(kotlin.String, kotlin.String, kotlin.Int, moe.ganen.jikankt.models.user.AnimeListSearchQuery)/additionalQuery">additionalQuery</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.user/-anime-list-search-query/index.html"><span class="identifier">AnimeListSearchQuery</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.user/-user-anime-list/index.html"><span class="identifier">UserAnimeList</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-user-friends.html">getUserFriends</a></h4>
+</td>
+<td>
+<p>Fetches MyAnimeList user's friend.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getUserFriends</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserFriends(kotlin.String, kotlin.Int)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserFriends(kotlin.String, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.user/-user-friends/index.html"><span class="identifier">UserFriends</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-user-history.html">getUserHistory</a></h4>
+</td>
+<td>
+<p>Fetches MyAnimeList user's history.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getUserHistory</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserHistory(kotlin.String, moe.ganen.jikankt.models.user.enums.HistoryType)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserHistory(kotlin.String, moe.ganen.jikankt.models.user.enums.HistoryType)/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.user.enums/-history-type/index.html"><span class="identifier">HistoryType</span></a>&nbsp;<span class="symbol">=</span>&nbsp;HistoryType.All<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.user/-user-history/index.html"><span class="identifier">UserHistory</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="get-user-manga-list.html">getUserMangaList</a></h4>
+</td>
+<td>
+<p>Fetches MyAnimeList user's manga list.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getUserMangaList</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserMangaList(kotlin.String, moe.ganen.jikankt.models.user.enums.MangaStatusType, kotlin.Int)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserMangaList(kotlin.String, moe.ganen.jikankt.models.user.enums.MangaStatusType, kotlin.Int)/filter">filter</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.user.enums/-manga-status-type/index.html"><span class="identifier">MangaStatusType</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MangaStatusType.All<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserMangaList(kotlin.String, moe.ganen.jikankt.models.user.enums.MangaStatusType, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.user/-user-manga-list/index.html"><span class="identifier">UserMangaList</span></a></code><br/>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">getUserMangaList</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserMangaList(kotlin.String, kotlin.String, kotlin.Int, moe.ganen.jikankt.models.user.MangaListSearchQuery)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserMangaList(kotlin.String, kotlin.String, kotlin.Int, moe.ganen.jikankt.models.user.MangaListSearchQuery)/query">query</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserMangaList(kotlin.String, kotlin.String, kotlin.Int, moe.ganen.jikankt.models.user.MangaListSearchQuery)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$getUserMangaList(kotlin.String, kotlin.String, kotlin.Int, moe.ganen.jikankt.models.user.MangaListSearchQuery)/additionalQuery">additionalQuery</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.user/-manga-list-search-query/index.html"><span class="identifier">MangaListSearchQuery</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.user/-user-manga-list/index.html"><span class="identifier">UserMangaList</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="search-anime.html">searchAnime</a></h4>
+</td>
+<td>
+<p>Search results for the query.
+NOTE: MyAnimeList only processes queries with a minimum of 3 letters.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">searchAnime</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchAnime(kotlin.String, moe.ganen.jikankt.models.search.AnimeSearchQuery, kotlin.Int)/query">query</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchAnime(kotlin.String, moe.ganen.jikankt.models.search.AnimeSearchQuery, kotlin.Int)/additionalQuery">additionalQuery</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.search/-anime-search-query/index.html"><span class="identifier">AnimeSearchQuery</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchAnime(kotlin.String, moe.ganen.jikankt.models.search.AnimeSearchQuery, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.search/-anime-search-result/index.html"><span class="identifier">AnimeSearchResult</span></a></code>
+<p>Search results for the query.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">searchAnime</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchAnime(moe.ganen.jikankt.models.search.AnimeSearchQuery, kotlin.Int)/additionalQuery">additionalQuery</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.search/-anime-search-query/index.html"><span class="identifier">AnimeSearchQuery</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchAnime(moe.ganen.jikankt.models.search.AnimeSearchQuery, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.search/-anime-search-result/index.html"><span class="identifier">AnimeSearchResult</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="search-character.html">searchCharacter</a></h4>
+</td>
+<td>
+<p>Search results for the query.
+NOTE: MyAnimeList only processes queries with a minimum of 3 letters.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">searchCharacter</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchCharacter(kotlin.String, kotlin.Int)/query">query</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchCharacter(kotlin.String, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.search/-character-search-result/index.html"><span class="identifier">CharacterSearchResult</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="search-manga.html">searchManga</a></h4>
+</td>
+<td>
+<p>Search results for the query.
+NOTE: MyAnimeList only processes queries with a minimum of 3 letters.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">searchManga</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchManga(kotlin.String, moe.ganen.jikankt.models.search.MangaSearchQuery, kotlin.Int)/query">query</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchManga(kotlin.String, moe.ganen.jikankt.models.search.MangaSearchQuery, kotlin.Int)/additionalQuery">additionalQuery</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.search/-manga-search-query/index.html"><span class="identifier">MangaSearchQuery</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchManga(kotlin.String, moe.ganen.jikankt.models.search.MangaSearchQuery, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.search/-manga-search-result/index.html"><span class="identifier">MangaSearchResult</span></a></code>
+<p>Search results for the query.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">searchManga</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchManga(moe.ganen.jikankt.models.search.MangaSearchQuery, kotlin.Int)/additionalQuery">additionalQuery</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.search/-manga-search-query/index.html"><span class="identifier">MangaSearchQuery</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchManga(moe.ganen.jikankt.models.search.MangaSearchQuery, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.search/-manga-search-result/index.html"><span class="identifier">MangaSearchResult</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="search-people.html">searchPeople</a></h4>
+</td>
+<td>
+<p>Search results for the query.
+NOTE: MyAnimeList only processes queries with a minimum of 3 letters.</p>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">searchPeople</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchPeople(kotlin.String, kotlin.Int)/query">query</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.JikanKt$searchPeople(kotlin.String, kotlin.Int)/page">page</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;1<span class="symbol">)</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.search/-people-search-result/index.html"><span class="identifier">PeopleSearchResult</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

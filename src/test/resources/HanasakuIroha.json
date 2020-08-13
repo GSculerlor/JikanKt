@@ -1,0 +1,166 @@
+{
+  "request_hash": "request:anime:d1bc66694652c54706aed9311d6fa495f20a7076",
+  "request_cached": true,
+  "request_cache_expiry": 316993,
+  "mal_id": 9289,
+  "url": "https://myanimelist.net/anime/9289/Hanasaku_Iroha",
+  "image_url": "https://cdn.myanimelist.net/images/anime/3/28967.jpg",
+  "trailer_url": "https://www.youtube.com/embed/8TNn2nsy0KA?enablejsapi=1&wmode=opaque&autoplay=1",
+  "title": "Hanasaku Iroha",
+  "title_english": "Hanasaku Iroha: Blossoms for Tomorrow",
+  "title_japanese": "花咲くいろは",
+  "title_synonyms": [],
+  "type": "TV",
+  "source": "Original",
+  "episodes": 26,
+  "status": "Finished Airing",
+  "airing": false,
+  "aired": {
+    "from": "2011-04-03T00:00:00+00:00",
+    "to": "2011-09-25T00:00:00+00:00",
+    "prop": {
+      "from": {
+        "day": 3,
+        "month": 4,
+        "year": 2011
+      },
+      "to": {
+        "day": 25,
+        "month": 9,
+        "year": 2011
+      }
+    },
+    "string": "Apr 3, 2011 to Sep 25, 2011"
+  },
+  "duration": "24 min per ep",
+  "rating": "PG-13 - Teens 13 or older",
+  "score": 7.97,
+  "scored_by": 98906,
+  "rank": 573,
+  "popularity": 506,
+  "members": 244850,
+  "favorites": 2267,
+  "synopsis": "Ohana Matsumae is an energetic and wild teenager residing in Tokyo with her carefree single mother. Abruptly, her mother decides to run away with her new boyfriend from debt collectors, forcing the young girl to fend for herself—as per her mother's \"rely only on yourself\" philosophy—in rural Japan, where her cold grandmother runs a small inn. Driven to adapt to the tranquil lifestyle of the countryside, Ohana experiences and deals with the challenges of working as a maid, as well as meeting and making friends with enthralling people at her new school and the inn. [Written by MAL Rewrite]",
+  "background": null,
+  "premiered": "Spring 2011",
+  "broadcast": "Sundays at 22:00 (JST)",
+  "related": {
+    "Adaptation": [
+      {
+        "mal_id": 25408,
+        "type": "manga",
+        "name": "Hanasaku Iroha",
+        "url": "https://myanimelist.net/manga/25408/Hanasaku_Iroha"
+      }
+    ],
+    "Side story": [
+      {
+        "mal_id": 14175,
+        "type": "anime",
+        "name": "Hanasaku Iroha: Home Sweet Home",
+        "url": "https://myanimelist.net/anime/14175/Hanasaku_Iroha__Home_Sweet_Home"
+      }
+    ],
+    "Character": [
+      {
+        "mal_id": 21103,
+        "type": "anime",
+        "name": "Utopia",
+        "url": "https://myanimelist.net/anime/21103/Utopia"
+      }
+    ]
+  },
+  "producers": [
+    {
+      "mal_id": 23,
+      "type": "anime",
+      "name": "Bandai Visual",
+      "url": "https://myanimelist.net/anime/producer/23/Bandai_Visual"
+    },
+    {
+      "mal_id": 64,
+      "type": "anime",
+      "name": "Sotsu",
+      "url": "https://myanimelist.net/anime/producer/64/Sotsu"
+    },
+    {
+      "mal_id": 76,
+      "type": "anime",
+      "name": "Yomiuri Telecasting",
+      "url": "https://myanimelist.net/anime/producer/76/Yomiuri_Telecasting"
+    },
+    {
+      "mal_id": 104,
+      "type": "anime",
+      "name": "Lantis",
+      "url": "https://myanimelist.net/anime/producer/104/Lantis"
+    },
+    {
+      "mal_id": 144,
+      "type": "anime",
+      "name": "Pony Canyon",
+      "url": "https://myanimelist.net/anime/producer/144/Pony_Canyon"
+    },
+    {
+      "mal_id": 777,
+      "type": "anime",
+      "name": "Showgate",
+      "url": "https://myanimelist.net/anime/producer/777/Showgate"
+    },
+    {
+      "mal_id": 1386,
+      "type": "anime",
+      "name": "Infinite",
+      "url": "https://myanimelist.net/anime/producer/1386/Infinite"
+    }
+  ],
+  "licensors": [
+    {
+      "mal_id": 372,
+      "type": "anime",
+      "name": "NIS America, Inc.",
+      "url": "https://myanimelist.net/anime/producer/372/NIS_America_Inc"
+    }
+  ],
+  "studios": [
+    {
+      "mal_id": 132,
+      "type": "anime",
+      "name": "P.A. Works",
+      "url": "https://myanimelist.net/anime/producer/132/PA_Works"
+    }
+  ],
+  "genres": [
+    {
+      "mal_id": 36,
+      "type": "anime",
+      "name": "Slice of Life",
+      "url": "https://myanimelist.net/anime/genre/36/Slice_of_Life"
+    },
+    {
+      "mal_id": 4,
+      "type": "anime",
+      "name": "Comedy",
+      "url": "https://myanimelist.net/anime/genre/4/Comedy"
+    },
+    {
+      "mal_id": 8,
+      "type": "anime",
+      "name": "Drama",
+      "url": "https://myanimelist.net/anime/genre/8/Drama"
+    }
+  ],
+  "opening_themes": [
+    "\"Hana no Iro (ハナノイロ)\" by nano.RIPE (eps 2-13)",
+    "\"Omokage Warp (面影ワープ)\" by nano.RIPE (eps 14-25)"
+  ],
+  "ending_themes": [
+    "\"Hana no Iro (ハナノイロ)\" by nano.RIPE (ep 1)",
+    "\"Hazy\" by Sphere (eps 2-5, 7, 9-10, 12-13)",
+    "\"Tsukikage to Buranko (月影とブランコ)\" by nano.RIPE (ep 6)",
+    "\"Yumeji (夢路)\" by nano.RIPE (eps 8, 26)",
+    "\"Saibou Kioku (細胞キオク)\" by nano.RIPE (ep 11)",
+    "\"Hanasaku Iroha (はなさくいろは)\" by Clammbon (クラムボン) (eps 14-21, 23, 24)",
+    "\"Hi Leap (ハイリープ)\" by nano.RIPE (ep 22)"
+  ]
+}

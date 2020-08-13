@@ -1,0 +1,296 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Anime - JikanKt</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">JikanKt</a>&nbsp;/&nbsp;<a href="../index.html">moe.ganen.jikankt.models.anime</a>&nbsp;/&nbsp;<a href="./index.html">Anime</a><br/>
+<br/>
+<h1>Anime</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Anime</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.base/-entity/index.html"><span class="identifier">Entity</span></a><span class="symbol">, </span><a href="../../moe.ganen.jikankt.models.base/-mal-entity/index.html"><span class="identifier">MalEntity</span></a></code>
+<p>Anime data class.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Anime data class.</p>
+<code><span class="identifier">Anime</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/malId">malId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/url">url</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/imageUrl">imageUrl</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/trailerUrl">trailerUrl</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/title">title</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/titleEnglish">titleEnglish</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/titleJapanese">titleJapanese</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/titleSynonyms">titleSynonyms</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/type">type</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.search.enums/-anime-type/index.html"><span class="identifier">AnimeType</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/source">source</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/episodes">episodes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/status">status</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/airing">airing</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/aired">aired</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.base.types/-time-interval/index.html"><span class="identifier">TimeInterval</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/duration">duration</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/rating">rating</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/score">score</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/scoredBy">scoredBy</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/rank">rank</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/popularity">popularity</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/members">members</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/favorites">favorites</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/synopsis">synopsis</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/background">background</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/premiered">premiered</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/broadcast">broadcast</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/related">related</span><span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt.models.base.types/-related-anime/index.html"><span class="identifier">RelatedAnime</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/producers">producers</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../moe.ganen.jikankt.models.base.types/-mal-sub-entity/index.html"><span class="identifier">MalSubEntity</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/licensors">licensors</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../moe.ganen.jikankt.models.base.types/-mal-sub-entity/index.html"><span class="identifier">MalSubEntity</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/studios">studios</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../moe.ganen.jikankt.models.base.types/-mal-sub-entity/index.html"><span class="identifier">MalSubEntity</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/genres">genres</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../moe.ganen.jikankt.models.base.types/-mal-sub-entity/index.html"><span class="identifier">MalSubEntity</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/openingThemes">openingThemes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.models.anime.Anime$<init>(kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.collections.List((kotlin.String)), moe.ganen.jikankt.models.search.enums.AnimeType, kotlin.String, kotlin.Int, kotlin.String, kotlin.Boolean, moe.ganen.jikankt.models.base.types.TimeInterval, kotlin.String, kotlin.String, kotlin.Double, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.String, kotlin.String, kotlin.String, kotlin.String, moe.ganen.jikankt.models.base.types.RelatedAnime, kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((moe.ganen.jikankt.models.base.types.MalSubEntity)), kotlin.collections.List((kotlin.String)), kotlin.collections.List((kotlin.String)))/endingThemes">endingThemes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="aired.html">aired</a></h4>
+</td>
+<td>
+<p>Interval of airing time in ISO8601 format.</p>
+<code><span class="keyword">val </span><span class="identifier">aired</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.base.types/-time-interval/index.html"><span class="identifier">TimeInterval</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="airing.html">airing</a></h4>
+</td>
+<td>
+<p>Whether the anime is currently airing or not.</p>
+<code><span class="keyword">val </span><span class="identifier">airing</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="background.html">background</a></h4>
+</td>
+<td>
+<p>Background info of the anime.</p>
+<code><span class="keyword">val </span><span class="identifier">background</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="broadcast.html">broadcast</a></h4>
+</td>
+<td>
+<p>Broadcast date of the anime (day and time).</p>
+<code><span class="keyword">val </span><span class="identifier">broadcast</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="duration.html">duration</a></h4>
+</td>
+<td>
+<p>Duration per episode.</p>
+<code><span class="keyword">val </span><span class="identifier">duration</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ending-themes.html">endingThemes</a></h4>
+</td>
+<td>
+<p>List of ending theme (ED) of this anime.</p>
+<code><span class="keyword">val </span><span class="identifier">endingThemes</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="episodes.html">episodes</a></h4>
+</td>
+<td>
+<p>Total episode(s) of the anime.</p>
+<code><span class="keyword">val </span><span class="identifier">episodes</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="favorites.html">favorites</a></h4>
+</td>
+<td>
+<p>Anime's favorites count on MyAnimeList.</p>
+<code><span class="keyword">val </span><span class="identifier">favorites</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="genres.html">genres</a></h4>
+</td>
+<td>
+<p>List of genre of this anime.</p>
+<code><span class="keyword">val </span><span class="identifier">genres</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../moe.ganen.jikankt.models.base.types/-mal-sub-entity/index.html"><span class="identifier">MalSubEntity</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="image-url.html">imageUrl</a></h4>
+</td>
+<td>
+<p>Anime's MyAnimeList cover/image link.</p>
+<code><span class="keyword">val </span><span class="identifier">imageUrl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="licensors.html">licensors</a></h4>
+</td>
+<td>
+<p>List of licensors of this anime.</p>
+<code><span class="keyword">val </span><span class="identifier">licensors</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../moe.ganen.jikankt.models.base.types/-mal-sub-entity/index.html"><span class="identifier">MalSubEntity</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mal-id.html">malId</a></h4>
+</td>
+<td>
+<p>ID associated with MyAnimeList.</p>
+<code><span class="keyword">val </span><span class="identifier">malId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="members.html">members</a></h4>
+</td>
+<td>
+<p>Anime's members count on MyAnimeList.</p>
+<code><span class="keyword">val </span><span class="identifier">members</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="opening-themes.html">openingThemes</a></h4>
+</td>
+<td>
+<p>List of opening theme (OP) of this anime.</p>
+<code><span class="keyword">val </span><span class="identifier">openingThemes</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="popularity.html">popularity</a></h4>
+</td>
+<td>
+<p>Anime's popularity rank on MyAnimeList.</p>
+<code><span class="keyword">val </span><span class="identifier">popularity</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="premiered.html">premiered</a></h4>
+</td>
+<td>
+<p>Season where anime premiered.</p>
+<code><span class="keyword">val </span><span class="identifier">premiered</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="producers.html">producers</a></h4>
+</td>
+<td>
+<p>List of producers of this anime.</p>
+<code><span class="keyword">val </span><span class="identifier">producers</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../moe.ganen.jikankt.models.base.types/-mal-sub-entity/index.html"><span class="identifier">MalSubEntity</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rank.html">rank</a></h4>
+</td>
+<td>
+<p>Anime's score rank on MyAnimeList.</p>
+<code><span class="keyword">val </span><span class="identifier">rank</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rating.html">rating</a></h4>
+</td>
+<td>
+<p>Age rating of the anime.</p>
+<code><span class="keyword">val </span><span class="identifier">rating</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="related.html">related</a></h4>
+</td>
+<td>
+<p>Lists of related items of the anime.</p>
+<code><span class="keyword">val </span><span class="identifier">related</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.base.types/-related-anime/index.html"><span class="identifier">RelatedAnime</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="score.html">score</a></h4>
+</td>
+<td>
+<p>Score at MyAnimeList. Formatted up to 2 decimal places.</p>
+<code><span class="keyword">val </span><span class="identifier">score</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="scored-by.html">scoredBy</a></h4>
+</td>
+<td>
+<p>Number of people/users that scored the anime.</p>
+<code><span class="keyword">val </span><span class="identifier">scoredBy</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="source.html">source</a></h4>
+</td>
+<td>
+<p>Source of the anime.</p>
+<code><span class="keyword">val </span><span class="identifier">source</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="status.html">status</a></h4>
+</td>
+<td>
+<p>Status of the anime (e.g "Airing", "Not yet airing", etc).</p>
+<code><span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="studios.html">studios</a></h4>
+</td>
+<td>
+<p>List of studios of this anime.</p>
+<code><span class="keyword">val </span><span class="identifier">studios</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../moe.ganen.jikankt.models.base.types/-mal-sub-entity/index.html"><span class="identifier">MalSubEntity</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="synopsis.html">synopsis</a></h4>
+</td>
+<td>
+<p>Synopsis of the anime.</p>
+<code><span class="keyword">val </span><span class="identifier">synopsis</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="title.html">title</a></h4>
+</td>
+<td>
+<p>Title of the anime.</p>
+<code><span class="keyword">val </span><span class="identifier">title</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="title-english.html">titleEnglish</a></h4>
+</td>
+<td>
+<p>Title of the anime in English.</p>
+<code><span class="keyword">val </span><span class="identifier">titleEnglish</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="title-japanese.html">titleJapanese</a></h4>
+</td>
+<td>
+<p>Title of the anime in Japanese.</p>
+<code><span class="keyword">val </span><span class="identifier">titleJapanese</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="title-synonyms.html">titleSynonyms</a></h4>
+</td>
+<td>
+<p>List of anime's synonyms.</p>
+<code><span class="keyword">val </span><span class="identifier">titleSynonyms</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="trailer-url.html">trailerUrl</a></h4>
+</td>
+<td>
+<p>Anime's official trailer URL.</p>
+<code><span class="keyword">val </span><span class="identifier">trailerUrl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="type.html">type</a></h4>
+</td>
+<td>
+<p>Type of the anime.</p>
+<code><span class="keyword">val </span><span class="identifier">type</span><span class="symbol">: </span><a href="../../moe.ganen.jikankt.models.search.enums/-anime-type/index.html"><span class="identifier">AnimeType</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="url.html">url</a></h4>
+</td>
+<td>
+<p>Anime's MyAnimeList link.</p>
+<code><span class="keyword">val </span><span class="identifier">url</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

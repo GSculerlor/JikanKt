@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RestClient - JikanKt</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">JikanKt</a>&nbsp;/&nbsp;<a href="../index.html">moe.ganen.jikankt.connection</a>&nbsp;/&nbsp;<a href="./index.html">RestClient</a><br/>
+<br/>
+<h1>RestClient</h1>
+<code><span class="keyword">class </span><span class="identifier">RestClient</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../moe.ganen.jikankt/-jikan-client/index.html"><span class="identifier">JikanClient</span></a></code>
+<p>Class that handle request.</p>
+<h3>Parameters</h3>
+<p><a name="isDebug"></a>
+<code>isDebug</code> - : a boolean that indicate if you run it on debug or not. If yes, it'll throw exception if something happen.</p>
+<p><a name="url"></a>
+<code>url</code> - : Custom URL, will use default (Jikan URL) if null or empty.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Class that handle request.</p>
+<code><span class="identifier">RestClient</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.connection.RestClient$<init>(kotlin.Boolean, kotlin.String)/isDebug">isDebug</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.connection.RestClient$<init>(kotlin.Boolean, kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="request.html">request</a></h4>
+</td>
+<td>
+<code><span class="keyword">suspend</span> <span class="keyword">fun </span><span class="identifier">request</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.connection.RestClient$request(kotlin.String, com.google.gson.JsonObject)/endPoint">endPoint</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="moe.ganen.jikankt.connection.RestClient$request(kotlin.String, com.google.gson.JsonObject)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">JsonObject</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">JsonElement</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-b-a-s-e_-u-r-l.html">BASE_URL</a></h4>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">BASE_URL</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

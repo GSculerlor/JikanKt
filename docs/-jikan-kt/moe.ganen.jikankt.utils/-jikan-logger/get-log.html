@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JikanLogger.getLog - JikanKt</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">JikanKt</a>&nbsp;/&nbsp;<a href="../index.html">moe.ganen.jikankt.utils</a>&nbsp;/&nbsp;<a href="index.html">JikanLogger</a>&nbsp;/&nbsp;<a href="./get-log.html">getLog</a><br/>
+<br/>
+<h1>getLog</h1>
+<a name="moe.ganen.jikankt.utils.JikanLogger$getLog(kotlin.String)"></a>
+<code><span class="keyword">fun </span><span class="identifier">getLog</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.utils.JikanLogger$getLog(kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Logger</span></code>
+<p>Will get the <a href="#">org.slf4j.Logger</a> with the given log-name
+or create and cache a fallback logger if there is no SLF4J implementation present.</p>
+<p>The fallback logger will be an instance of a slightly modified version of SLF4Js SimpleLogger.</p>
+<h3>Parameters</h3>
+<p><a name="name"></a>
+<code>name</code> - The name of the Logger</p>
+<p><strong>Return</strong><br/>
+Logger with given log name</p>
+<a name="moe.ganen.jikankt.utils.JikanLogger$getLog(java.lang.Class((kotlin.Any)))"></a>
+<code><span class="keyword">fun </span><span class="identifier">getLog</span><span class="symbol">(</span><span class="identifier" id="moe.ganen.jikankt.utils.JikanLogger$getLog(java.lang.Class((kotlin.Any)))/clazz">clazz</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/lang/Class.html"><span class="identifier">Class</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Logger</span></code>
+<p>Will get the <a href="#">org.slf4j.Logger</a> for the given Class
+or create and cache a fallback logger if there is no SLF4J implementation present.</p>
+<p>The fallback logger will be an instance of SimpleLogger.</p>
+<h3>Parameters</h3>
+<p><a name="clazz"></a>
+<code>clazz</code> - The class used for the Logger name</p>
+<p><strong>Return</strong><br/>
+Logger for given Class</p>
+</BODY>
+</HTML>

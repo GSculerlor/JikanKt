@@ -1,0 +1,419 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Entity - JikanKt</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">JikanKt</a>&nbsp;/&nbsp;<a href="../index.html">moe.ganen.jikankt.models.base</a>&nbsp;/&nbsp;<a href="./index.html">Entity</a><br/>
+<br/>
+<h1>Entity</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">Entity</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html"><span class="identifier">Serializable</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<code><span class="identifier">Entity</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="request-cached.html">requestCached</a></h4>
+</td>
+<td>
+<p>Whether you're request cached.</p>
+<code><span class="keyword">val </span><span class="identifier">requestCached</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="request-cache-expiry.html">requestCacheExpiry</a></h4>
+</td>
+<td>
+<p>Cache expiration in second.</p>
+<code><span class="keyword">val </span><span class="identifier">requestCacheExpiry</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="request-hash.html">requestHash</a></h4>
+</td>
+<td>
+<p>Hash of the request.</p>
+<code><span class="keyword">val </span><span class="identifier">requestHash</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.anime/-anime/index.html">Anime</a></h4>
+</td>
+<td>
+<p>Anime data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Anime</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a><span class="symbol">, </span><a href="../-mal-entity/index.html"><span class="identifier">MalEntity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.anime/-anime-characters-staff/index.html">AnimeCharactersStaff</a></h4>
+</td>
+<td>
+<p>Anime's characters and staff data class</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimeCharactersStaff</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.anime/-anime-episodes/index.html">AnimeEpisodes</a></h4>
+</td>
+<td>
+<p>Anime's episodes data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimeEpisodes</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.anime/-anime-forum/index.html">AnimeForum</a></h4>
+</td>
+<td>
+<p>Anime's list of forum data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimeForum</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.anime/-anime-more-info/index.html">AnimeMoreInfo</a></h4>
+</td>
+<td>
+<p>Anime's more info data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimeMoreInfo</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.anime/-anime-news/index.html">AnimeNews</a></h4>
+</td>
+<td>
+<p>Anime's news data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimeNews</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.anime/-anime-pictures/index.html">AnimePictures</a></h4>
+</td>
+<td>
+<p>Anime's pictures data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimePictures</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.anime/-anime-recommendations/index.html">AnimeRecommendations</a></h4>
+</td>
+<td>
+<p>Anime's recommendation data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimeRecommendations</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.anime/-anime-reviews/index.html">AnimeReviews</a></h4>
+</td>
+<td>
+<p>Anime review's data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimeReviews</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.search/-anime-search-result/index.html">AnimeSearchResult</a></h4>
+</td>
+<td>
+<p>Result of search query.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimeSearchResult</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.anime/-anime-stats/index.html">AnimeStats</a></h4>
+</td>
+<td>
+<p>Statistics of the anime.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimeStats</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.base.types/-anime-sub-entity/index.html">AnimeSubEntity</a></h4>
+</td>
+<td>
+<p>Anime sub entity data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimeSubEntity</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a><span class="symbol">, </span><a href="../-mal-entity/index.html"><span class="identifier">MalEntity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.anime/-anime-user-updates/index.html">AnimeUserUpdates</a></h4>
+</td>
+<td>
+<p>Anime's user updates data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimeUserUpdates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.anime/-anime-videos/index.html">AnimeVideos</a></h4>
+</td>
+<td>
+<p>Video's related to the anime data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimeVideos</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.character/-character/index.html">Character</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Character</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.character/-character-pictures/index.html">CharacterPictures</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">CharacterPictures</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.search/-character-search-result/index.html">CharacterSearchResult</a></h4>
+</td>
+<td>
+<p>Result of search query.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">CharacterSearchResult</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.club/-club/index.html">Club</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Club</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a><span class="symbol">, </span><a href="../-mal-entity/index.html"><span class="identifier">MalEntity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.club/-club-members/index.html">ClubMembers</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">ClubMembers</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.genre/-genre/index.html">Genre</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Genre</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.prod/-magazine/index.html">Magazine</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Magazine</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.manga/-manga/index.html">Manga</a></h4>
+</td>
+<td>
+<p>Manga data class</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Manga</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a><span class="symbol">, </span><a href="../-mal-entity/index.html"><span class="identifier">MalEntity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.anime/-manga-characters/index.html">MangaCharacters</a></h4>
+</td>
+<td>
+<p>Manga's characters data class</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">MangaCharacters</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.manga/-manga-forum/index.html">MangaForum</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">MangaForum</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.manga/-manga-more-info/index.html">MangaMoreInfo</a></h4>
+</td>
+<td>
+<p>Manga's more info data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">MangaMoreInfo</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.manga/-manga-news/index.html">MangaNews</a></h4>
+</td>
+<td>
+<p>Manga's news data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">MangaNews</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.manga/-manga-pictures/index.html">MangaPictures</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">MangaPictures</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.manga/-manga-recommendations/index.html">MangaRecommendations</a></h4>
+</td>
+<td>
+<p>Manga's recommendation data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">MangaRecommendations</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.manga/-manga-reviews/index.html">MangaReviews</a></h4>
+</td>
+<td>
+<p>Manga review's data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">MangaReviews</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.search/-manga-search-result/index.html">MangaSearchResult</a></h4>
+</td>
+<td>
+<p>Result of search query.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">MangaSearchResult</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.manga/-manga-stats/index.html">MangaStats</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">MangaStats</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.manga/-manga-user-updates/index.html">MangaUserUpdates</a></h4>
+</td>
+<td>
+<p>Manga's user updates data class.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">MangaUserUpdates</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.search/-people-search-result/index.html">PeopleSearchResult</a></h4>
+</td>
+<td>
+<p>Result of search query.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">PeopleSearchResult</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.person/-person/index.html">Person</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Person</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.person/-person-pictures/index.html">PersonPictures</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">PersonPictures</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.prod/-producer/index.html">Producer</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Producer</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.schedule/-schedule/index.html">Schedule</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Schedule</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.season/-season/index.html">Season</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Season</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.season/-season-archives/index.html">SeasonArchives</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">SeasonArchives</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.top/-top-anime/index.html">TopAnime</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">TopAnime</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.top/-top-characters/index.html">TopCharacters</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">TopCharacters</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.top/-top-manga/index.html">TopManga</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">TopManga</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.top/-top-people/index.html">TopPeople</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">TopPeople</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.user/-user/index.html">User</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">User</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.user/-user-anime-list/index.html">UserAnimeList</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">UserAnimeList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.user/-user-friends/index.html">UserFriends</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">UserFriends</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.user/-user-history/index.html">UserHistory</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">UserHistory</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="../../moe.ganen.jikankt.models.user/-user-manga-list/index.html">UserMangaList</a></h4>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">UserMangaList</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Entity</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
