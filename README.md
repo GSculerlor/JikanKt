@@ -1,5 +1,7 @@
 ![JikanKt Banner](https://raw.githubusercontent.com/GSculerlor/JikanKt/master/assets/JikanKt.png)
 
+No longer maintaned. Will not update anything from now on (including Jikan v4).
+
 [![Discord Server](https://img.shields.io/discord/460491088004907029.svg?style=flat&logo=discord)](https://discord.gg/4tvCr36) [![CodeFactor](https://www.codefactor.io/repository/github/gsculerlor/jikankt/badge)](https://www.codefactor.io/repository/github/gsculerlor/jikankt) [![](https://jitpack.io/v/GSculerlor/JikanKt.svg)](https://jitpack.io/#GSculerlor/JikanKt)
  ![Master build](https://github.com/GSculerlor/JikanKt/workflows/Master%20build/badge.svg)
 
